@@ -1,0 +1,14 @@
+[user]
+    email = rgeorgiev583@gmail.com
+    name = Radoslav Georgiev
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+[core]
+    editor = vim
+[credential]
+    helper = store
+[push]
+    default = simple
