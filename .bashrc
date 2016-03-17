@@ -70,6 +70,12 @@ _isroot=false
   if [[ -d "$HOME/bin" ]] ; then
       PATH="$HOME/bin:$PATH"
   fi
+  # GOLANG {{{
+    if which go &>/dev/null; then
+      export GOPATH=$HOME/go
+      export PATH=$HOME/go/bin:$PATH
+    fi
+  #}}}
   # RUBY {{{
     if which ruby &>/dev/null; then
       GEM_DIR=$(ruby -rubygems -e 'puts Gem.user_dir')/bin
