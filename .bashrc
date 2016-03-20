@@ -647,3 +647,5 @@ _isroot=false
     fi
   #}}}
 #}}}
+
+if [ -e /home/sid/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sid/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
