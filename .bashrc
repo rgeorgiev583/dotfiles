@@ -74,6 +74,8 @@ _isroot=false
     if which go &>/dev/null; then
       export GOPATH=$HOME/go
       export PATH=$HOME/go/bin:$PATH
+
+      alias vimgo='vim -u ~/.vimrc.go'
     fi
   #}}}
   # RUBY {{{
