@@ -185,6 +185,40 @@ _isroot=false
     alias la='ll -A'
     alias lm='la | less'
   #}}}
+  # OTHER {{{
+    alias vimgo='vim -u ~/.vimrc.go'
+  #}}}
+  # GIT {{{
+    alias gst='git status'
+    alias gc='git commit'
+    alias ga='git add'
+    alias gap='git add -p'
+    alias gl='git log'
+    alias gd='git diff'
+    alias gsh='git show'
+    alias ggr='git grep'
+    alias gbs='git bisect'
+    alias gco='git checkout'
+    alias gcob='git checkout -b'
+    alias gr='git reset'
+    alias grv='git revert'
+    alias gbr='git branch'
+    alias gssh='git stash'
+    alias gsshs='git stash show'
+    alias gsshp='git stash pop'
+    alias gpl='git pull'
+    alias gf='git fetch'
+    alias gfr='git pull --rebase'
+    alias gsfr='!git stash && git pull --rebase && git stash pop'
+    alias gp='git push'
+    alias gm='git merge'
+    alias grb='git rebase'
+    alias gi='git init'
+    alias gcl='git clone'
+    alias gt='git tag'
+    alias gmv='git mv'
+    alias grm='git rm'
+  #}}}
 #}}}
 # FUNCTIONS {{{
   # BETTER GIT COMMANDS {{{
