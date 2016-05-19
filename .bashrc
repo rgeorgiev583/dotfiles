@@ -213,6 +213,7 @@ _isroot=false
     alias gfr='git pull --rebase'
     alias gsfr='git stash && git pull --rebase && git stash pop'
     alias gp='git push'
+    alias gre='git remote'
     alias gm='git merge'
     alias grb='git rebase'
     alias gi='git init'
