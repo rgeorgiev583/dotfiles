@@ -66,26 +66,6 @@ _isroot=false
   #}}}
 #}}}
 # CONFIG {{{
-  export PATH=/usr/local/bin:$PATH
-  if [[ -d "$HOME/bin" ]] ; then
-      PATH="$HOME/bin:$PATH"
-  fi
-  # GOLANG {{{
-    if which go &>/dev/null; then
-      export GOPATH=$HOME/go
-      export PATH=$HOME/go/bin:$PATH
-
-      alias vimgo='vim -u ~/.vimrc.go'
-    fi
-  #}}}
-  # RUBY {{{
-    if which ruby &>/dev/null; then
-      GEM_DIR=$(ruby -rubygems -e 'puts Gem.user_dir')/bin
-      if [[ -d "$GEM_DIR" ]]; then
-        export PATH=$GEM_DIR:$PATH
-      fi
-    fi
-  #}}}
   # CHRUBY {{{
     if [[ -f "/usr/share/chruby/chruby.sh" ]]; then
       source /usr/share/chruby/chruby.sh
