@@ -6,6 +6,8 @@
     ci = commit
     co = checkout
     br = branch
+    fr = !git pull --rebase
+    sfr = !git stash && git pull --rebase && git stash pop
 [core]
     editor = vim
 [credential]
