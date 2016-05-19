@@ -219,8 +219,6 @@ _isroot=false
     alias gi='git init'
     alias gcl='git clone'
     alias gt='git tag'
-    alias gmv='git mv'
-    alias grm='git rm'
   #}}}
 #}}}
 # FUNCTIONS {{{
