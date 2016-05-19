@@ -191,6 +191,7 @@ _isroot=false
   # GIT {{{
     alias gst='git status'
     alias gc='git commit'
+	alias gca='git commit --amend'
     alias ga='git add'
     alias gap='git add -p'
     alias gl='git log'
