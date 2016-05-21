@@ -49,12 +49,12 @@ _isroot=false
     #fi
 
     # PROMPTLINE {{{
+      source ~/.bash/promptline.sh
+    #}}}
   else
     export TERM='xterm-color'
   fi
 ##}}}
-      source ~/.bash/promptline.sh
-    #}}}
 # BASH OPTIONS {{{
   shopt -s cdspell                 # Correct cd typos
   shopt -s checkwinsize            # Update windows size on command
