@@ -190,6 +190,7 @@ _isroot=false
     alias lm='la | less'
   #}}}
   # OTHER {{{
+    alias systemctl='sc'
     alias vimgo='vim -u ~/.vimrc.go'
   #}}}
   # GIT {{{
