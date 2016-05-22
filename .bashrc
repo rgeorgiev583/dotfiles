@@ -224,6 +224,8 @@ _isroot=false
     alias gi='git init'
     alias gcl='git clone'
     alias gt='git tag'
+    alias gstr='git subtree'
+    alias gsm='git submodule'
   #}}}
 #}}}
 # FUNCTIONS {{{
