@@ -202,6 +202,7 @@ _isroot=false
     alias gap='git add -p'
     alias gl='git log'
     alias gd='git diff'
+    alias gds='git diff --staged'
     alias gsh='git show'
     alias ggr='git grep'
     alias gbs='git bisect'
