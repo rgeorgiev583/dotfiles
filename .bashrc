@@ -190,10 +190,6 @@ _isroot=false
     alias la='ll -A'
     alias lm='la | less'
   #}}}
-  # OTHER {{{
-    alias sc='systemctl'
-    alias vimgo='vim -u ~/.vimrc.go'
-  #}}}
   # GIT {{{
     alias gst='git status'
     alias gc='git commit'
@@ -231,39 +227,58 @@ _isroot=false
     alias gsm='git submodule'
   #}}}
   # YADM {{{
-    alias yst='yadm status'
-    alias yc='yadm commit'
-	alias yca='yadm commit --amend'
-    alias ya='yadm add'
-    alias yap='yadm add -p'
-    alias yl='yadm log'
-    alias yd='yadm diff'
-    alias ysh='yadm show'
-    alias ygr='yadm grep'
-    alias ybs='yadm bisect'
-    alias yco='yadm checkout'
-    alias ycob='yadm checkout -b'
-    alias yr='yadm reset'
-    alias yrv='yadm revert'
-    alias ybr='yadm branch'
-    alias yssh='yadm stash'
-    alias ysshs='yadm stash show'
-    alias ysshp='yadm stash pop'
-    alias ymv='yadm mv'
-    alias yrm='yadm rm'
-    alias ypl='yadm pull'
-    alias yf='yadm fetch'
-    alias yfr='yadm pull --rebase'
-    alias ysfr='yadm stash && yadm pull --rebase && yadm stash pop'
-    alias yp='yadm push'
-    alias yre='yadm remote'
-    alias ym='yadm merge'
-    alias yrb='yadm rebase'
-    alias yi='yadm init'
-    alias ycl='yadm clone'
-    alias yt='yadm tag'
-    alias ystr='yadm subtree'
-    alias ysm='yadm submodule'
+    if which yadm &>/dev/null; then
+      alias yst='yadm status'
+      alias yc='yadm commit'
+      alias yca='yadm commit --amend'
+      alias ya='yadm add'
+      alias yap='yadm add -p'
+      alias yl='yadm log'
+      alias yd='yadm diff'
+      alias yds='yadm diff --staged'
+      alias ysh='yadm show'
+      alias ygr='yadm grep'
+      alias ybs='yadm bisect'
+      alias yco='yadm checkout'
+      alias ycob='yadm checkout -b'
+      alias yr='yadm reset'
+      alias yrv='yadm revert'
+      alias ybr='yadm branch'
+      alias yssh='yadm stash'
+      alias ysshs='yadm stash show'
+      alias ysshp='yadm stash pop'
+      alias ymv='yadm mv'
+      alias yrm='yadm rm'
+      alias ypl='yadm pull'
+      alias yf='yadm fetch'
+      alias yfr='yadm pull --rebase'
+      alias ysfr='yadm stash && yadm pull --rebase && yadm stash pop'
+      alias yp='yadm push'
+      alias yre='yadm remote'
+      alias ym='yadm merge'
+      alias yrb='yadm rebase'
+      alias yi='yadm init'
+      alias ycl='yadm clone'
+      alias yt='yadm tag'
+      alias ystr='yadm subtree'
+      alias ysm='yadm submodule'
+    fi
+  #}}}
+  # OTHER {{{
+    alias sc='systemctl'
+    alias c='cd'
+    alias o='pushd'
+    alias p='popd'
+    alias x='exit'
+
+    if which vim &>/dev/null; then
+      alias v='vim'
+      alias e='vim'
+
+      if which go &>/dev/null; then
+        alias vimgo='vim -u ~/.vimrc.go'
+      fi
+    fi
   #}}}
 #}}}
 # FUNCTIONS {{{
