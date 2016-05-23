@@ -183,6 +183,7 @@ _isroot=false
     fi
   #}}}
   # LS {{{
+    alias l='ls'
     alias ls='ls -hF --color=auto'
     alias lr='ls -R'                    # recursive ls
     alias ll='ls -alh'
