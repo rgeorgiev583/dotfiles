@@ -271,6 +271,7 @@ _isroot=false
   # OTHER {{{
     alias sc='systemctl'
     alias c='cd'
+    alias d='cd ..'
     alias o='pushd'
     alias p='popd'
     alias x='exit'
