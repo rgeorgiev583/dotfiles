@@ -14,3 +14,5 @@
     helper = store
 [push]
     default = simple
+[merge]
+    tool = meld
