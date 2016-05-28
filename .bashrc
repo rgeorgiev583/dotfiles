@@ -177,7 +177,18 @@ _isroot=false
       alias pacmake="makepkg -fcsi"         # Make package from PKGBUILD file in current directory
     fi
   #}}}
-  # MULTIMEDIA {{{
+  # PACAUR ALIASES {{{
+    if $_isarch && which pacaur &>/dev/null; then
+      alias pupg='pacaur -Syu'
+      alias pup='pacaur -Sy'
+      alias pi='pacaur -S'
+      alias pr='pacaur -R'
+      alias pw='pacaur -Rcsn'
+      alias pl='pacaur -Si'
+      alias pss='pacaur -Ss'
+    fi
+  # }}}
+  # MULTIMEDIA {{
     if which get_flash_videos &>/dev/null; then
       alias gfv='get_flash_videos -r 720p --subtitles'
     fi
