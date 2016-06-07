@@ -486,6 +486,10 @@ _isroot=false
           usage
       esac
     }
+
+    gsco(){
+        git stash && git checkout "$@" && git stash pop
+    }
   #}}}
   # TOP 10 COMMANDS {{{
     # copyright 2007 - 2010 Christopher Bratusek
