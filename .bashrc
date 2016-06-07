@@ -14,10 +14,10 @@ _isroot=false
 [[ $UID -eq 0 ]] && _isroot=true
 # }}}
 ## PS1 CONFIG {{{
-  [[ -f $HOME/.dircolors ]] && eval $(dircolors -b $HOME/.dircolors)
+  [[ -f .dircolors ]] && eval $(dircolors -b .dircolors)
   if $_isxrunning; then
 
-    [[ -f $HOME/.dircolors_256 ]] && eval $(dircolors -b $HOME/.dircolors_256)
+    [[ -f .dircolors_256 ]] && eval $(dircolors -b .dircolors_256)
 
     export TERM='xterm-256color'
 
@@ -49,7 +49,7 @@ _isroot=false
     #fi
 
     # PROMPTLINE {{{
-      source ~/.bash/promptline.sh
+      source .bash/promptline.sh
     #}}}
   else
     export TERM='xterm-color'
@@ -294,7 +294,7 @@ _isroot=false
       alias e='vim'
 
       if which go &>/dev/null; then
-        alias vimgo='vim -u ~/.vimrc.go'
+        alias vimgo='vim -u .vimrc.go'
       fi
     fi
   #}}}
