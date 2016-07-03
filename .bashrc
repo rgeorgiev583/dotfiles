@@ -49,7 +49,7 @@ _isroot=false
     #fi
 
     # PROMPTLINE {{{
-      source .bash/promptline.sh
+      source $HOME/.bash/promptline.sh
     #}}}
   else
     export TERM='xterm-color'
