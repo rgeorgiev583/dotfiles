@@ -729,7 +729,7 @@ _isroot=false
 
   #}}}
   # ENTER AND LIST DIRECTORY{{{
-    function cd() { builtin cd -- "$@" && { [ "$PS1" = "" ] || ls -hrt --color; }; }
+    function cd() { builtin cd -- "$@" && { [ "$PS1" = "" ] || ls -h --color; }; }
   #}}}
   # SYSTEMD SUPPORT {{{
     if which systemctl &>/dev/null; then
