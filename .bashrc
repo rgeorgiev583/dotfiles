@@ -240,6 +240,7 @@ _isroot=false
     alias gre='git remote'
     alias gm='git merge'
     alias grb='git rebase'
+    alias grbi='git rebase -i'
     alias gi='git init'
     alias gcl='git clone'
     alias gt='git tag'
