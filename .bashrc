@@ -496,7 +496,8 @@ _isroot=false
       esac
     }
 
-    gsco(){
+    gsco()
+    {
         git stash && git checkout "$@" && git stash pop
     }
 
