@@ -232,8 +232,10 @@ _isroot=false
     alias gmv='git mv'
     alias grm='git rm'
     alias gpl='git pull'
+    alias gpls='git submodule foreach --recursive git pull'
     alias gf='git fetch'
     alias gfr='git pull -r'
+    alias gfrs='git submodule foreach --recursive git pull -r'
     alias gp='git push'
     alias gre='git remote'
     alias gm='git merge'
@@ -243,6 +245,8 @@ _isroot=false
     alias gt='git tag'
     alias gstr='git subtree'
     alias gsm='git submodule'
+    alias gsms='git submodule sync --recursive'
+    alias gsmum='git submodule update --init --recursive --merge --remote'
   #}}}
   # YADM {{{
     if which yadm &>/dev/null; then
@@ -504,6 +508,26 @@ _isroot=false
     gsfr()
     {
         git stash && git pull -r "$@" && git stash pop
+    }
+
+    gpla()
+    {
+        git pull "$@" && git submodule sync --recursive && git submodule foreach --recursive git pull "$@"
+    }
+
+    gplsu()
+    {
+        git pull "$@" && git submodule sync --recursive && git submodule update --init --recursive --merge --remote
+    }
+
+    gfra()
+    {
+        git pull -r "$@" && git submodule sync --recursive && git submodule foreach --recursive git pull -r "$@"
+    }
+
+    gfrsu()
+    {
+        git pull -r "$@" && git submodule sync --recursive && git submodule update --init --recursive --rebase --remote
     }
   #}}}
   # TOP 10 COMMANDS {{{
