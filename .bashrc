@@ -234,7 +234,6 @@ _isroot=false
     alias gpl='git pull'
     alias gf='git fetch'
     alias gfr='git pull -r'
-    alias gsfr='git stash && git pull -r && git stash pop'
     alias gp='git push'
     alias gre='git remote'
     alias gm='git merge'
@@ -499,6 +498,11 @@ _isroot=false
 
     gsco(){
         git stash && git checkout "$@" && git stash pop
+    }
+
+    gsfr()
+    {
+        git stash && git pull -r "$@" && git stash pop
     }
   #}}}
   # TOP 10 COMMANDS {{{
