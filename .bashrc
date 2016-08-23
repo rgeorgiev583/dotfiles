@@ -204,7 +204,7 @@ _isroot=false
   # GIT {{{
     alias gst='git status'
     alias gc='git commit'
-	alias gca='git commit --amend'
+    alias gca='git commit --amend'
     alias ga='git add'
     alias gap='git add -p'
     alias gl='git log'
@@ -281,18 +281,22 @@ _isroot=false
       alias ymv='yadm mv'
       alias yrm='yadm rm'
       alias ypl='yadm pull'
+      alias ypls='yadm submodule foreach --recursive yadm pull'
       alias yf='yadm fetch'
-      alias yfr='yadm pull --rebase'
-      alias ysfr='yadm stash && yadm pull --rebase && yadm stash pop'
+      alias yfr='yadm pull -r'
+      alias yfrs='yadm submodule foreach --recursive yadm pull -r'
       alias yp='yadm push'
       alias yre='yadm remote'
       alias ym='yadm merge'
       alias yrb='yadm rebase'
+      alias yrbi='yadm rebase -i'
       alias yi='yadm init'
       alias ycl='yadm clone'
       alias yt='yadm tag'
       alias ystr='yadm subtree'
       alias ysm='yadm submodule'
+      alias ysms='yadm submodule sync --recursive'
+      alias ysmum='yadm submodule update --init --recursive --merge --remote'
     fi
   #}}}
   # OTHER {{{
@@ -529,6 +533,36 @@ _isroot=false
     gfrsu()
     {
         git pull -r "$@" && git submodule sync --recursive && git submodule update --init --recursive --rebase --remote
+    }
+
+    ysco()
+    {
+        yadm stash && yadm checkout "$@" && yadm stash pop
+    }
+
+    ysfr()
+    {
+        yadm stash && yadm pull -r "$@" && yadm stash pop
+    }
+
+    ypla()
+    {
+        yadm pull "$@" && yadm submodule sync --recursive && yadm submodule foreach --recursive yadm pull "$@"
+    }
+
+    yplsu()
+    {
+        yadm pull "$@" && yadm submodule sync --recursive && yadm submodule update --init --recursive --merge --remote
+    }
+
+    yfra()
+    {
+        yadm pull -r "$@" && yadm submodule sync --recursive && yadm submodule foreach --recursive yadm pull -r "$@"
+    }
+
+    yfrsu()
+    {
+        yadm pull -r "$@" && yadm submodule sync --recursive && yadm submodule update --init --recursive --rebase --remote
     }
   #}}}
   # TOP 10 COMMANDS {{{
