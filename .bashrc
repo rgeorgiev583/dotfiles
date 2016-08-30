@@ -237,6 +237,7 @@ _isroot=false
     alias gfr='git pull -r'
     alias gfrs='git submodule foreach --recursive git pull -r'
     alias gp='git push'
+    alias gps='git submodule foreach --recursive git push'
     alias gre='git remote'
     alias gm='git merge'
     alias grb='git rebase'
@@ -286,6 +287,7 @@ _isroot=false
       alias yfr='yadm pull -r'
       alias yfrs='yadm submodule foreach --recursive yadm pull -r'
       alias yp='yadm push'
+      alias yps='yadm submodule foreach --recursive git push'
       alias yre='yadm remote'
       alias ym='yadm merge'
       alias yrb='yadm rebase'
@@ -540,6 +542,11 @@ _isroot=false
         gsfr && git submodule sync --recursive && git submodule foreach --recursive gsfr
     }
 
+    gpa()
+    {
+        git push && git submodule foreach --recursive git push
+    }
+
     ysco()
     {
         yadm stash && yadm checkout "$@" && yadm stash pop
@@ -574,7 +581,12 @@ _isroot=false
     {
         ysfr && yadm submodule sync --recursive && yadm submodule foreach --recursive ysfr
     }
-    
+
+    ypa()
+    {
+        yadm push && git submodule foreach --recursive yadm push
+    }
+
   #}}}
   # TOP 10 COMMANDS {{{
     # copyright 2007 - 2010 Christopher Bratusek
