@@ -535,6 +535,11 @@ _isroot=false
         git pull -r "$@" && git submodule sync --recursive && git submodule update --init --recursive --rebase --remote
     }
 
+    gsfra()
+    {
+        gsfr && git submodule sync --recursive && git submodule foreach --recursive gsfr
+    }
+
     ysco()
     {
         yadm stash && yadm checkout "$@" && yadm stash pop
@@ -564,6 +569,12 @@ _isroot=false
     {
         yadm pull -r "$@" && yadm submodule sync --recursive && yadm submodule update --init --recursive --rebase --remote
     }
+
+    ysfra()
+    {
+        ysfr && yadm submodule sync --recursive && yadm submodule foreach --recursive ysfr
+    }
+    
   #}}}
   # TOP 10 COMMANDS {{{
     # copyright 2007 - 2010 Christopher Bratusek
