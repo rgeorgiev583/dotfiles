@@ -509,82 +509,82 @@ _isroot=false
 
     gsco()
     {
-        git stash && git checkout "$@" && git stash pop
+        git stash; git checkout "$@"; git stash pop
     }
 
     gsfr()
     {
-        git stash && git pull -r "$@" && git stash pop
+        git stash; git pull -r "$@"; git stash pop
     }
 
     gpla()
     {
-        git pull "$@" && git submodule sync --recursive && git submodule foreach --recursive git pull "$@"
+        git pull "$@"; git submodule sync --recursive; git submodule foreach --recursive git pull "$@"
     }
 
     gplsu()
     {
-        git pull "$@" && git submodule sync --recursive && git submodule update --init --recursive --merge --remote
+        git pull "$@"; git submodule sync --recursive; git submodule update --init --recursive --merge --remote
     }
 
     gfra()
     {
-        git pull -r "$@" && git submodule sync --recursive && git submodule foreach --recursive git pull -r "$@"
+        git pull -r "$@"; git submodule sync --recursive; git submodule foreach --recursive git pull -r "$@"
     }
 
     gfrsu()
     {
-        git pull -r "$@" && git submodule sync --recursive && git submodule update --init --recursive --rebase --remote
+        git pull -r "$@"; git submodule sync --recursive; git submodule update --init --recursive --rebase --remote
     }
 
     gsfra()
     {
-        git stash && git pull -r "$@" && git stash pop && git submodule sync --recursive && git submodule foreach --recursive bash -c 'git stash && git pull -r "$@" && git stash pop'
+        git stash; git pull -r "$@"; git stash pop; git submodule sync --recursive; git submodule foreach --recursive bash -c 'git stash; git pull -r "$@"; git stash pop'
     }
 
     gpa()
     {
-        git push && git submodule foreach --recursive git push
+        git push; git submodule foreach --recursive git push
     }
 
     ysco()
     {
-        yadm stash && yadm checkout "$@" && yadm stash pop
+        yadm stash; yadm checkout "$@"; yadm stash pop
     }
 
     ysfr()
     {
-        yadm stash && yadm pull -r "$@" && yadm stash pop
+        yadm stash; yadm pull -r "$@"; yadm stash pop
     }
 
     ypla()
     {
-        yadm pull "$@" && yadm submodule sync --recursive && yadm submodule foreach --recursive yadm pull "$@"
+        yadm pull "$@"; yadm submodule sync --recursive; yadm submodule foreach --recursive yadm pull "$@"
     }
 
     yplsu()
     {
-        yadm pull "$@" && yadm submodule sync --recursive && yadm submodule update --init --recursive --merge --remote
+        yadm pull "$@"; yadm submodule sync --recursive; yadm submodule update --init --recursive --merge --remote
     }
 
     yfra()
     {
-        yadm pull -r "$@" && yadm submodule sync --recursive && yadm submodule foreach --recursive yadm pull -r "$@"
+        yadm pull -r "$@"; yadm submodule sync --recursive; yadm submodule foreach --recursive yadm pull -r "$@"
     }
 
     yfrsu()
     {
-        yadm pull -r "$@" && yadm submodule sync --recursive && yadm submodule update --init --recursive --rebase --remote
+        yadm pull -r "$@"; yadm submodule sync --recursive; yadm submodule update --init --recursive --rebase --remote
     }
 
     ysfra()
     {
-        yadm stash && yadm pull -r "$@" && yadm stash pop && yadm submodule sync --recursive && yadm submodule foreach --recursive bash -c 'yadm stash && yadm pull -r "$@" && yadm stash pop'
+        yadm stash; yadm pull -r "$@"; yadm stash pop; yadm submodule sync --recursive; yadm submodule foreach --recursive bash -c 'yadm stash; yadm pull -r "$@"; yadm stash pop'
     }
 
     ypa()
     {
-        yadm push && git submodule foreach --recursive yadm push
+        yadm push; git submodule foreach --recursive yadm push
     }
 
   #}}}
