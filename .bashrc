@@ -539,7 +539,7 @@ _isroot=false
 
     gsfra()
     {
-        gsfr && git submodule sync --recursive && git submodule foreach --recursive gsfr
+        git stash && git pull -r "$@" && git stash pop && git submodule sync --recursive && git submodule foreach --recursive bash -c 'git stash && git pull -r "$@" && git stash pop'
     }
 
     gpa()
@@ -579,7 +579,7 @@ _isroot=false
 
     ysfra()
     {
-        ysfr && yadm submodule sync --recursive && yadm submodule foreach --recursive ysfr
+        yadm stash && yadm pull -r "$@" && yadm stash pop && yadm submodule sync --recursive && yadm submodule foreach --recursive bash -c 'yadm stash && yadm pull -r "$@" && yadm stash pop'
     }
 
     ypa()
