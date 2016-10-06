@@ -36,7 +36,7 @@ _isroot=false
     #}
 
     #if [[ $PS1 && -f /usr/share/git/git-prompt.sh ]]; then
-      source /usr/share/git/completion/git-completion.bash
+      #source /usr/share/git/completion/git-completion.bash
       #source /usr/share/git/git-prompt.sh
 
       #export GIT_PS1_SHOWDIRTYSTATE=1
@@ -66,6 +66,7 @@ _isroot=false
     complete -cf sudo
     if [[ -f /etc/bash_completion ]]; then
       . /etc/bash_completion
+      source /usr/share/git/completion/git-completion.bash
     fi
   #}}}
 #}}}
