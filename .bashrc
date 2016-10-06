@@ -346,6 +346,53 @@ _isroot=false
       alias ysm='yadm submodule'
       alias ysms='yadm submodule sync --recursive'
       alias ysmum='yadm submodule update --init --recursive --merge --remote'
+
+      __git_complete yst   _git_status
+      __git_complete yc    _git_commit
+      __git_complete yca   _git_commit
+      __git_complete ya    _git_add
+      __git_complete yap   _git_add
+      __git_complete yl    _git_log
+      __git_complete yd    _git_diff
+      __git_complete yds   _git_diff
+      __git_complete yapp  _git_apply
+      __git_complete yappp _git_apply
+      __git_complete ysh   _git_show
+      __git_complete ygr   _git_grep
+      __git_complete ybs   _git_bisect
+      __git_complete yco   _git_checkout
+      __git_complete ycop  _git_checkout
+      __git_complete ycob  _git_checkout
+      __git_complete yr    _git_reset
+      __git_complete yrp   _git_reset
+      __git_complete yrv   _git_revert
+      __git_complete ybr   _git_branch
+      __git_complete ybrr  _git_branch
+      __git_complete yssh  _git_stash
+      __git_complete ysshl _git_stash
+      __git_complete ysshs _git_stash
+      __git_complete ysshp _git_stash
+      __git_complete yssha _git_stash
+      __git_complete ysshd _git_stash
+      __git_complete ymv   _git_mv
+      __git_complete yrm   _git_rm
+      __git_complete ypl   _git_pull
+      __git_complete ypls  _git_submodule
+      __git_complete yf    _git_fetch
+      __git_complete yfr   _git_pull
+      __git_complete yfrs  _git_submodule
+      __git_complete yp    _git_push
+      __git_complete yps   _git_submodule
+      __git_complete yre   _git_remote
+      __git_complete ym    _git_merge
+      __git_complete yrb   _git_rebase
+      __git_complete yrbi  _git_rebase
+      __git_complete yi    _git_init
+      __git_complete ycl   _git_clone
+      __git_complete yt    _git_tag
+      __git_complete ysm   _git_submodule
+      __git_complete ysms  _git_submodule
+      __git_complete ysmum _git_submodule
     fi
   #}}}
   # OTHER {{{
