@@ -249,6 +249,53 @@ _isroot=false
     alias gsm='git submodule'
     alias gsms='git submodule sync --recursive'
     alias gsmum='git submodule update --init --recursive --merge --remote'
+
+    __git_complete gst   _git_status
+    __git_complete gc    _git_commit
+    __git_complete gca   _git_commit
+    __git_complete ga    _git_add
+    __git_complete gap   _git_add
+    __git_complete gl    _git_log
+    __git_complete gd    _git_diff
+    __git_complete gds   _git_diff
+    __git_complete gapp  _git_apply
+    __git_complete gappp _git_apply
+    __git_complete gsh   _git_show
+    __git_complete ggr   _git_grep
+    __git_complete gbs   _git_bisect
+    __git_complete gco   _git_checkout
+    __git_complete gcop  _git_checkout
+    __git_complete gcob  _git_checkout
+    __git_complete gr    _git_reset
+    __git_complete grp   _git_reset
+    __git_complete grv   _git_revert
+    __git_complete gbr   _git_branch
+    __git_complete gbrr  _git_branch
+    __git_complete gssh  _git_stash
+    __git_complete gsshl _git_stash
+    __git_complete gsshs _git_stash
+    __git_complete gsshp _git_stash
+    __git_complete gssha _git_stash
+    __git_complete gsshd _git_stash
+    __git_complete gmv   _git_mv
+    __git_complete grm   _git_rm
+    __git_complete gpl   _git_pull
+    __git_complete gpls  _git_submodule
+    __git_complete gf    _git_fetch
+    __git_complete gfr   _git_pull
+    __git_complete gfrs  _git_submodule
+    __git_complete gp    _git_push
+    __git_complete gps   _git_submodule
+    __git_complete gre   _git_remote
+    __git_complete gm    _git_merge
+    __git_complete grb   _git_rebase
+    __git_complete grbi  _git_rebase
+    __git_complete gi    _git_init
+    __git_complete gcl   _git_clone
+    __git_complete gt    _git_tag
+    __git_complete gsm   _git_submodule
+    __git_complete gsms  _git_submodule
+    __git_complete gsmum _git_submodule
   #}}}
   # YADM {{{
     if which yadm &>/dev/null; then
