@@ -67,8 +67,8 @@ _isroot=false
     complete -cf sudo
     if [[ -f /etc/bash_completion ]]; then
       . /etc/bash_completion
-      source /usr/share/git/completion/git-completion.bash
     fi
+    source /usr/share/git/completion/git-completion.bash
   #}}}
 #}}}
 # CONFIG {{{
