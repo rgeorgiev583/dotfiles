@@ -39,12 +39,13 @@ _isroot=false
     #if [[ $PS1 && -f /usr/share/git/git-prompt.sh ]]; then
       #source /usr/share/git/completion/git-completion.bash
       #source /usr/share/git/git-prompt.sh
+      #source $HOME/.bash/subversion-prompt.sh
 
       #export GIT_PS1_SHOWDIRTYSTATE=1
       #export GIT_PS1_SHOWSTASHSTATE=1
       #export GIT_PS1_SHOWUNTRACKEDFILES=0
 
-      #export PS1="$GY[$Y\u$GY@$P\h$GY:$B\W\$(__git_ps1 \"$GY|$LB%s\")$GY]$W\$(get_prompt_symbol) "
+      #export PS1="$GY[$Y\u$GY@$P\h$GY:$B\W\$(__git_svn_ps1 \"$GY|$LB%s\")$GY]$W\$(get_prompt_symbol) "
     #else
       #export PS1="$GY[$Y\u$GY@$P\h$GY:$B\W$GY]$W\$(get_prompt_symbol) "
     #fi
