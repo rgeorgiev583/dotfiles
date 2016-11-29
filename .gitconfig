@@ -1,18 +1,1 @@
-[user]
-    email = rgeorgiev583@gmail.com
-    name = Radoslav Georgiev
-[alias]
-    st = status
-    ci = commit
-    co = checkout
-    br = branch
-    fr = !git pull --rebase
-    sfr = !git stash && git pull --rebase && git stash pop
-[core]
-    editor = vim
-[credential]
-    helper = store
-[push]
-    default = simple
-[merge]
-    tool = meld
+/home/radoslav/.gitconfig##Linux.blackbox
