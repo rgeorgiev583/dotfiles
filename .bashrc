@@ -190,7 +190,7 @@ _isroot=false
       alias pss='pacaur -Ss'
     fi
   # }}}
-  # MULTIMEDIA {{
+  # MULTIMEDIA {{{
     if which get_flash_videos &>/dev/null; then
       alias gfv='get_flash_videos -r 720p --subtitles'
     fi
