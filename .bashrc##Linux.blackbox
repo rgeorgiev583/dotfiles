@@ -72,6 +72,9 @@ _isroot=false
     if [[ -f /usr/share/git/completion/git-completion.bash ]]; then
       source /usr/share/git/completion/git-completion.bash
     fi
+    if [[ -f $HOME/.bash/git-completion.bash ]]; then
+      source $HOME/.bash/git-completion.bash
+    fi
   #}}}
 #}}}
 # CONFIG {{{
