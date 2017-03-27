@@ -659,6 +659,12 @@ _isroot=false
     gplsu()
     {
         git submodule sync --recursive
+        git pull "$@" && git submodule update --init --recursive --remote
+    }
+
+    gplsum()
+    {
+        git submodule sync --recursive
         git pull "$@" && git submodule update --init --recursive --merge --remote
     }
 
