@@ -1,1 +1,0 @@
-/home/radoslav/.bashrc##Linux.blackbox
