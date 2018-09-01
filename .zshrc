@@ -90,6 +90,13 @@ source ~/.zshrc.pre-oh-my-zsh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export OH_MY_NEOVIM=/home/sid/.oh-my-neovim
+export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml"
+
+source /home/sid/.oh-my-neovim/tools/functions.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -98,10 +105,3 @@ source ~/.zshrc.pre-oh-my-zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export OH_MY_NEOVIM=/home/sid/.oh-my-neovim
-export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml"
-source /home/sid/.oh-my-neovim/tools/functions.sh
-#PATH="/bin:$PATH"
-#PATH="/home/sid/.node_modules_global/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
