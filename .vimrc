@@ -26,3 +26,6 @@ let g:oh_my_vim_packages=[
             \]
 
 exec ':so ' $OH_MY_VIM."/vimrc"
+
+" enable mouse behavior
+set mouse=a
