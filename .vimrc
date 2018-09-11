@@ -2,7 +2,7 @@ if empty($DISPLAY)
     source $VIMRUNTIME/defaults.vim
 else
     " This is the oh my vim directory
-    let $OH_MY_VIM="/home/sid/.oh-my-vim"
+    let $OH_MY_VIM=$HOME."/.oh-my-vim"
     let &runtimepath=substitute(&runtimepath, '^', $OH_MY_VIM.",", 'g')
 
     " Select the packages you need
