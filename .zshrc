@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/sid/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,10 +90,10 @@ source ~/.zshrc.pre-oh-my-zsh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-export OH_MY_NEOVIM=/home/sid/.oh-my-neovim
+export OH_MY_NEOVIM=$HOME/.oh-my-neovim
 export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml"
 
-source /home/sid/.oh-my-neovim/tools/functions.sh
+source $HOME/.oh-my-neovim/tools/functions.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
