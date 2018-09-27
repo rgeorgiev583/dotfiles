@@ -142,4 +142,9 @@ ex ()
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
+export OH_MY_NEOVIM=$HOME/.oh-my-neovim
+export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml"
+
+source $HOME/.oh-my-neovim/tools/functions.sh
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
