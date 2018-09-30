@@ -1,4 +1,5 @@
 export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 unset LESS
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
