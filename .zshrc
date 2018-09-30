@@ -65,6 +65,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   z
+  archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
