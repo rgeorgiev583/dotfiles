@@ -90,11 +90,11 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias cp="cp -i"                                  # confirm before overwriting something
+which df    2> /dev/null && alias df='df -h'      # human-readable sizes
+which free  2> /dev/null && alias free='free -m'  # show sizes in MB
 
-xhost +local:root > /dev/null 2>&1
+which xhost 2> /dev/null && xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
 
