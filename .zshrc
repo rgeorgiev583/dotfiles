@@ -64,8 +64,8 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 
 ## Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
-which df   2> /dev/null && alias df='df -h'                     # Human-readable sizes
-which free 2> /dev/null && alias free='free -m'                 # Show sizes in MB
+which df   2> /dev/null >&2 && alias df='df -h'                 # Human-readable sizes
+which free 2> /dev/null >&2 && alias free='free -m'             # Show sizes in MB
 #alias gitu='git add . && git commit && git push'
 
 # Theming section
@@ -81,7 +81,7 @@ setopt prompt_subst
 # Maia prompt
 PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
 # Print a greeting message when shell is started
-if which uname 2> /dev/null && which lsb_release 2> /dev/null; then
+if which uname 2> /dev/null >&2 && which lsb_release 2> /dev/null >&2; then
     echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 fi
 ## Prompt on right side:
