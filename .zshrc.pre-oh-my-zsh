@@ -12,14 +12,14 @@ setopt autocd                                                   # if only direct
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path 
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
-HISTSIZE=1000
-SAVEHIST=500
+#HISTSIZE=1000
+#SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 
@@ -50,13 +50,13 @@ bindkey '^[[1;5C' forward-word                                  #
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-## Alias section 
+## Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
 which df   2> /dev/null && alias df='df -h'                     # Human-readable sizes
 which free 2> /dev/null && alias free='free -m'                 # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 
-# Theming section  
+# Theming section
 autoload -U compinit colors zcalc
 compinit -d
 colors
@@ -125,7 +125,7 @@ parse_git_state() {
 
 git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  
+
   # If inside a Git repository, print its branch and state
   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
@@ -156,7 +156,7 @@ unset LESS
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
-bindkey '^[[A' history-substring-search-up			
+bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 if [[ ! -f /proc/$PPID/comm ]]; then
@@ -180,7 +180,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
   konsole|qterminal)
         RPROMPT+='$(git_prompt_string)'
-    ;;   
+    ;;
   'tmux: server')
   	if $(ps -p$PPID| grep -q -e konsole -e qterminal); then
         RPROMPT+='$(git_prompt_string)'
@@ -188,7 +188,7 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
         RPROMPT+='$(git_prompt_string)'
 		## Base16 Shell color themes.
 		#possible themes: 3024, apathy, ashes, atelierdune, atelierforest, atelierhearth,
-		#atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties, 
+		#atelierseaside, bespin, brewer, chalk, codeschool, colors, default, eighties,
 		#embers, flat, google, grayscale, greenscreen, harmonic16, isotope, londontube,
 		#marrakesh, mocha, monokai, ocean, paraiso, pop (dark only), railscasts, shapesifter,
 		#solarized, summerfruit, tomorrow, twilight
