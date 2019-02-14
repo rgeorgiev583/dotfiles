@@ -67,6 +67,10 @@ alias cp="cp -i"                                                # Confirm before
 which df   2> /dev/null >&2 && alias df='df -h'                 # Human-readable sizes
 which free 2> /dev/null >&2 && alias free='free -m'             # Show sizes in MB
 #alias gitu='git add . && git commit && git push'
+alias makej="make -j$(($(nproc) + 1))"
+alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
+alias cachemakej="cachemake -j$(($(nproc) + 1))"
+alias distmake="make CC='distcc' CXX='distcc'"
 
 # Theming section
 autoload -U compinit colors zcalc
