@@ -22,6 +22,7 @@ setopt nobeep                                                   # No beep
 #setopt appendhistory                                           # Immediately append history instead of overwriting
 #setopt histignorealldups                                       # If a new command is a duplicate, remove the older one
 setopt autocd                                                   # if only directory path is entered, cd there.
+setopt bashrematch                                              # Store matched regexp groups in the BASH_REMATCH array variable
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
