@@ -1,4 +1,4 @@
-if !has('win32') && !has('macunix') && empty($DISPLAY)
+if empty($DISPLAY)
     source $VIMRUNTIME/defaults.vim
 else
     " This is the oh my vim directory

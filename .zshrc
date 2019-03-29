@@ -66,8 +66,8 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 
 ## Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
-which df   2> /dev/null >&2 && alias df='df -h'                 # Human-readable sizes
-which free 2> /dev/null >&2 && alias free='free -m'             # Show sizes in MB
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
 #alias gitu='git add . && git commit && git push'
 alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
@@ -87,9 +87,7 @@ setopt prompt_subst
 # Maia prompt
 PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
 # Print a greeting message when shell is started
-if which uname 2> /dev/null >&2 && which lsb_release 2> /dev/null >&2; then
-    echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
-fi
+echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 ## Prompt on right side:
 #  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
 #  - shows exit status of previous command (if previous command finished with an error)
