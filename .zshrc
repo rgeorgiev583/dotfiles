@@ -73,6 +73,7 @@ alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
+alias diff='diff -U0 --color'
 
 # Theming section
 autoload -U compinit colors zcalc
