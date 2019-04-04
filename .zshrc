@@ -75,12 +75,12 @@ alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
 alias diff='diff -u --color'
 
-diffless() {
-    diff -u --color=always "$@" | less -r
+function diffless {
+    diff --color=always "$@" | less -r
 }
 
-grepless() {
-    grep --exclude-dir={.bzr,CVS,.git,.hg,.svn} --color=always "$@" | less -r
+function grepless {
+    grep --color=always "$@" | less -r
 }
 
 # Theming section
