@@ -73,10 +73,10 @@ alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
-alias diff='diff -U0 --color'
+alias diff='diff -u --color'
 
 diffless() {
-    diff -U0 --color=always "$@" | less -r
+    diff -u --color=always "$@" | less -r
 }
 
 # Theming section
