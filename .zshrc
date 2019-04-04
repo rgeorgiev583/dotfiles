@@ -80,7 +80,7 @@ diffless() {
 }
 
 grepless() {
-    grep --color=always "$@" | less -r
+    grep --exclude-dir={.bzr,CVS,.git,.hg,.svn} --color=always "$@" | less -r
 }
 
 # Theming section
