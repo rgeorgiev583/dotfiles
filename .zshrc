@@ -76,7 +76,7 @@ alias distmake="make CC='distcc' CXX='distcc'"
 alias diff='diff -U0 --color'
 
 diffless() {
-    diff --color=always "$@" | less -r
+    diff -U0 --color=always "$@" | less -r
 }
 
 # Theming section
