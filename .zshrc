@@ -75,6 +75,10 @@ alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
 alias diff='diff -U0 --color'
 
+diffless() {
+    diff --color=always "$@" | less -r
+}
+
 # Theming section
 autoload -U compinit colors zcalc
 compinit -d
