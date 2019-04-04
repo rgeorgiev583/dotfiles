@@ -79,6 +79,10 @@ diffless() {
     diff -u --color=always "$@" | less -r
 }
 
+grepless() {
+    grep --color=always "$@" | less -r
+}
+
 # Theming section
 autoload -U compinit colors zcalc
 compinit -d
