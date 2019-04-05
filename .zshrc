@@ -66,15 +66,14 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 
 ## Alias section
 alias e='nvim'
-alias cp="cp -i"                                                # Confirm before overwriting something
+alias cp='cp -i'                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
-#alias gitu='git add . && git commit && git push'
+alias diff='diff -u --color'
 alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
-alias diff='diff -u --color'
 
 function diffless {
     diff --color=always "$@" | less -r
