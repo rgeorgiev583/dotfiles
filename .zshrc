@@ -65,6 +65,7 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 ## Alias section
+alias e='nvim'
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
