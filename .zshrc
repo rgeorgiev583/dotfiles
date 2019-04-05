@@ -147,7 +147,7 @@ git_prompt_string() {
 # Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
  #PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
 # Maia prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b\$(git_prompt_string)%{$fg[red]%}%(?.. [%?])%{$reset_color%}%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b\$(git_prompt_string)%{$fg[red]%}%(?.. [%?])%{$reset_color%}%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b "
 # Print a greeting message when shell is started
 echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 ## Prompt on right side:
