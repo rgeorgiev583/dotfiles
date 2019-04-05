@@ -33,3 +33,6 @@ else
     " enable mouse behavior
     set mouse=a
 endif
+
+nnoremap <silent> <M-Left> :bp<CR>
+nnoremap <silent> <M-Right> :bn<CR>
