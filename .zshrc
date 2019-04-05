@@ -91,17 +91,6 @@ colors
 # enable substitution for prompt
 setopt prompt_subst
 
-# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
- #PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
-# Maia prompt
-PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
-# Print a greeting message when shell is started
-echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
-## Prompt on right side:
-#  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
-#  - shows exit status of previous command (if previous command finished with an error)
-#  - is invisible, if neither is the case
-
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"                              # plus/minus     - clean repo
 GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$reset_color%}"
@@ -152,13 +141,19 @@ git_prompt_string() {
   local git_where="$(parse_git_branch)"
 
   # If inside a Git repository, print its branch and state
-  [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+  [ -n "$git_where" ] && echo " $GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
-# Right prompt with exit status of previous command marked with ✓ or ✗
- RPROMPT="%(?.%{$fg[green]%}✓ %{$reset_color%}.%{$fg[red]%}✗ %{$reset_color%})"
-# Right prompt with exit status of previous command if not successful
- RPROMPT+="%{$fg[red]%} %(?..[%?])"
+# Prompt (on left side) similar to default bash prompt, or redhat zsh prompt with colors
+ #PROMPT="%(!.%{$fg[red]%}[%n@%m %1~]%{$reset_color%}# .%{$fg[green]%}[%n@%m %1~]%{$reset_color%}$ "
+# Maia prompt
+PROMPT="%B%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~)%u%b\$(git_prompt_string)%{$fg[red]%}%(?.. [%?])%{$reset_color%}%b >%{$fg[cyan]%}>%B%(?.%{$fg[cyan]%}.%{$fg[red]%})>%{$reset_color%}%b " # Print some system information when the shell is first started
+# Print a greeting message when shell is started
+echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+## Prompt on right side:
+#  - shows status of git when in git repository (code adapted from https://techanic.net/2012/12/30/my_git_prompt_for_zsh.html)
+#  - shows exit status of previous command (if previous command finished with an error)
+#  - is invisible, if neither is the case
 
 
 # Color man pages
@@ -184,7 +179,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-RPROMPT+='$(git_prompt_string)'
 # Use autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
