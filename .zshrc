@@ -70,6 +70,7 @@ alias cp='cp -i'                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias diff='diff -u --color'
+alias sc='systemctl'
 alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
