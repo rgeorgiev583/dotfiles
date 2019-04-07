@@ -38,3 +38,5 @@ nnoremap <silent> <M-Left> :bp<CR>
 nnoremap <silent> <M-Right> :bn<CR>
 
 set norelativenumber
+
+set hidden
