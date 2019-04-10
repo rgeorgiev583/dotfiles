@@ -3,3 +3,7 @@
 	name = Radoslav Georgiev
 [credential]
 	helper = store
+[difftool "code"]
+	cmd = code -wd $LOCAL $REMOTE
+[difftool "nvimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE
