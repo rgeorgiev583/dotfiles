@@ -35,8 +35,6 @@ setopt rc_expand_param                                          # Array expensio
 setopt no_check_jobs                                            # Don't warn about running processes when exiting
 setopt numeric_glob_sort                                        # Sort filenames numerically when it makes sense
 setopt no_beep                                                  # No beep
-#setopt append_history                                          # Immediately append history instead of overwriting
-#setopt hist_ignore_all_dups                                    # If a new command is a duplicate, remove the older one
 setopt auto_cd                                                  # if only directory path is entered, cd there.
 setopt bash_rematch                                             # Store matched regexp groups in the BASH_REMATCH array variable
 setopt null_glob                                                # remove glob pattern if it does not match anything; do not report an error
@@ -48,9 +46,6 @@ zstyle ':completion:*' rehash true                              # automatically 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-#HISTFILE=~/.zhistory
-#HISTSIZE=1000
-#SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 ## Keybindings section
