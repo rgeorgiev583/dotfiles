@@ -200,4 +200,4 @@ export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons
 
 source $HOME/.oh-my-neovim/tools/functions.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
