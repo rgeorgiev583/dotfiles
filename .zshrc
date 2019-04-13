@@ -18,6 +18,8 @@ if ! zgen saved; then
 	# Use shell completion
 	zgen load zsh-users/zsh-completions
 
+	zgen load unixorn/autoupdate-zgen
+
 	## Oh-my-zsh theme
 	zgen oh-my-zsh themes/robbyrussell
 
