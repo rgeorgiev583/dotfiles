@@ -78,11 +78,11 @@ alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
 alias distmake="make CC='distcc' CXX='distcc'"
 
-diffless() {
+function diffless {
     diff -u --color=always "$@" | less -r
 }
 
-grepless() {
+function grepless {
     grep --exclude-dir={.bzr,CVS,.git,.hg,.svn} --color=always "$@" | less -r
 }
 
