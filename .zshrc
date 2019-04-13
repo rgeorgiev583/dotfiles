@@ -1,4 +1,4 @@
-source /usr/share/zsh/share/antigen.zsh
+source "${HOME}/antigen.zsh"
 
 antigen use oh-my-zsh
 
