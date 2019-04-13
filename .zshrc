@@ -1,24 +1,28 @@
-source "${HOME}/antigen.zsh"
+source "${HOME}/.zgen/zgen.zsh"
 
-antigen use oh-my-zsh
+if ! zgen saved; then
+	zgen oh-my-zsh
 
-antigen bundle git
-antigen bundle z
-antigen bundle archlinux
+	## Oh-my-zsh plugins
+	zgen oh-my-zsh plugins/git
+	zgen oh-my-zsh plugins/z
+	zgen oh-my-zsh plugins/archlinux
 
-## Plugins section: Enable fish-style features
-# Use syntax highlighting
-antigen bundle zsh-users/zsh-syntax-highlighting
-# Use history substring search
-antigen bundle zsh-users/zsh-history-substring-search
-# Use autosuggestion
-antigen bundle zsh-users/zsh-autosuggestions
-# Use shell completion
-antigen bundle zsh-users/zsh-completions
+	## Plugins section: Enable fish-style features
+	# Use syntax highlighting
+	zgen load zsh-users/zsh-syntax-highlighting
+	# Use history substring search
+	zgen load zsh-users/zsh-history-substring-search
+	# Use autosuggestion
+	zgen load zsh-users/zsh-autosuggestions
+	# Use shell completion
+	zgen load zsh-users/zsh-completions
 
-antigen theme robbyrussell
+	## Oh-my-zsh theme
+	zgen oh-my-zsh themes/robbyrussell
 
-antigen apply
+	zgen save
+fi
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
