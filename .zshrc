@@ -115,12 +115,12 @@ GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}●%{$reset_color%}"       # red circle  
 GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}●%{$reset_color%}"     # yellow circle  - tracked files modified
 GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"        # green circle   - staged changes present = ready for "git push"
 
-parse_git_branch() {
+function parse_git_branch {
   # Show Git branch/tag, or name-rev if on detached head
   ( git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD ) 2> /dev/null
 }
 
-parse_git_state() {
+function parse_git_state {
   # Show different symbols as appropriate for various Git repository states
   # Compose this value via multiple conditional appends.
   local GIT_STATE=""
@@ -150,7 +150,7 @@ parse_git_state() {
   fi
 }
 
-git_prompt_string() {
+function git_prompt_string {
   local git_where="$(parse_git_branch)"
 
   # If inside a Git repository, print its branch and state
