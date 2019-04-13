@@ -184,9 +184,9 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-export OH_MY_NEOVIM=$HOME/.oh-my-neovim
-export OH_MY_NEOVIM_EXTENSIONS="default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml"
+export OH_MY_NEOVIM=${HOME}/.oh-my-neovim
+export OH_MY_NEOVIM_EXTENSIONS='default clang code_style denite git go gpg icons json mouse neomake register search session smooth_scroll snippet spell test themes true_color undo vim xml yaml'
 
-source $HOME/.oh-my-neovim/tools/functions.sh
+source "${HOME}/.oh-my-neovim/tools/functions.sh"
 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
