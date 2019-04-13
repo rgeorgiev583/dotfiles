@@ -53,7 +53,6 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 #SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
-
 ## Keybindings section
 bindkey -e
 bindkey '^[[7~' beginning-of-line                               # Home key
@@ -173,7 +172,6 @@ echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
 #  - shows exit status of previous command (if previous command finished with an error)
 #  - is invisible, if neither is the case
 
-
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
@@ -183,7 +181,6 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 unset LESS
-
 
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
