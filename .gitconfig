@@ -7,3 +7,7 @@
 	cmd = code -wd $LOCAL $REMOTE
 [difftool "nvimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE
+[merge]
+	conflictstyle = diff3
+[rerere]
+	enabled = true
