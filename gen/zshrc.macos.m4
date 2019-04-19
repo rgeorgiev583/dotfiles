@@ -1,5 +1,6 @@
 changequote(`<{[(', `)]}>')dnl
 dnl
+define(OSDEP_OMZ_PLUGINS,<{[()]}>)dnl
 define(OSDEP_ALIASES,<{[(alias diff='gdiff -u --color'
 alias makej="make -j$(($(sysctl -n hw.ncpu) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
