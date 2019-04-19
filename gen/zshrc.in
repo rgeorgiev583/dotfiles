@@ -1,4 +1,3 @@
-changequote(STARTQUOTE, ENDQUOTE)dnl
 source "${HOME}/.zgen/zgen.zsh"
 
 ## Zgen section
@@ -85,7 +84,6 @@ alias df='df -h'                                                # Human-readable
 alias makej="make -j$(($(nproc) + 1))"
 alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
 alias cachemakej="cachemake -j$(($(nproc) + 1))"
-alias distmake="make CC='distcc' CXX='distcc'"
 
 OSDEP_ALIASES
 OSDEP_FUNCTIONS
