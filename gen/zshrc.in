@@ -81,9 +81,9 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 alias e="${EDITOR}"
 alias cp='cp -i'                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
-DISTCC_ALIASES
 
 OSDEP_ALIASES
+DISTCC_ALIASES
 OSDEP_FUNCTIONS
 
 ## Theming section
