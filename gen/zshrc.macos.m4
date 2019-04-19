@@ -1,6 +1,10 @@
 changequote(`<{[(', `)]}>')dnl
 dnl
-define(OSDEP_ALIASES,<{[(alias diff='gdiff -u --color')]}>)dnl
+define(OSDEP_ALIASES,<{[(alias diff='gdiff -u --color'
+alias makej="make -j$(($(sysctl -n hw.ncpu) + 1))"
+alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
+alias cachemakej="cachemake -j$(($(sysctl -n hw.ncpu) + 1))"
+)]}>)dnl
 define(OSDEP_FUNCTIONS,<{[(
 function diffless {
     gdiff -u --color=always "$@" | less -r

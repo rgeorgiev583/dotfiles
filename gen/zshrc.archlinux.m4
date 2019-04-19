@@ -3,7 +3,11 @@ dnl
 define(OSDEP_OMZ_PLUGINS,<{[(zgen oh-my-zsh plugins/archlinux)]}>)dnl
 define(OSDEP_ALIASES,<{[(alias free='free -m'                                            # Show sizes in MB
 alias diff='diff -u --color'
-alias sc='systemctl')]}>)dnl
+alias sc='systemctl'
+alias makej="make -j$(($(nproc) + 1))"
+alias cachemake="make CC='ccache gcc' CXX='ccache g++'"
+alias cachemakej="cachemake -j$(($(nproc) + 1))"
+)]}>)dnl
 define(OSDEP_FUNCTIONS,<{[(
 function diffless {
     diff -u --color=always "$@" | less -r
