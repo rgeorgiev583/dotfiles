@@ -1,5 +1,3 @@
-#!/usr/bin/fish
-
 if test -f functions.fish
 	source functions.fish
 end
