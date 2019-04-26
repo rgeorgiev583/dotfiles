@@ -40,3 +40,7 @@ nnoremap <silent> <M-Right> :bn<CR>
 set norelativenumber
 
 set hidden
+
+call neobundle#begin(expand($OH_MY_VIM.'/bundle/'))
+NeoBundle 'lambdalisue/suda.vim'
+call neobundle#end()
