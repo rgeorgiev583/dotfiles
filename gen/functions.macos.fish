@@ -1,5 +1,9 @@
-alias -s diff 'gdiff -u --color'
 alias -s grep 'ggrep --color'
+
+function diff
+	gdiff $argv | diff-so-fancy
+end
+funcsave diff
 
 alias -s makej 'make -j'(math (sysctl -n hw.ncpu) + 1)
 alias -s cachemake "make CC='ccache gcc' CXX='ccache g++'"

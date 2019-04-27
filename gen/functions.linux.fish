@@ -1,5 +1,10 @@
-alias -s diff 'diff -u --color'
 alias -s grep 'grep --color'
+
+function diff
+	diff $argv | diff-so-fancy
+end
+funcsave diff
+
 alias -s free 'free -h'
 alias -s sc 'systemctl'
 
