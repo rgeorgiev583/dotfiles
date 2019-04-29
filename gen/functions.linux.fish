@@ -1,19 +1,9 @@
 function diff
-	command diff -u $argv | diff-so-fancy
+	command diff -u $argv | diff-so-fancy | less --tabs=4 -RFX
 end
 funcsave diff
 
-alias -s grep 'grep --color'
-
-function diffless
-    diff $argv | less --tabs=4 -RFX
-end
-funcsave diffless
-
-function grepless
-    grep $argv | less --tabs=4 -RFX
-end
-funcsave grepless
+alias -s grep 'grep --color | less --tabs=4 -RFX'
 
 alias -s makej 'make -j'(math (nproc) + 1)
 alias -s cachemake "make CC='ccache gcc' CXX='ccache g++'"
