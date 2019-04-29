@@ -1,5 +1,5 @@
 function diff
-	command diff $argv | diff-so-fancy
+	command diff -u $argv | diff-so-fancy
 end
 funcsave diff
 
