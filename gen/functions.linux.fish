@@ -13,11 +13,11 @@ alias -s cachemake "make CC='ccache gcc' CXX='ccache g++'"
 alias -s cachemakej 'cachemake -j'(math (nproc) + 1)
 
 function diffless
-    diff --color=always $argv | less -r
+    diff $argv | less --tabs=4 -RFX
 end
 funcsave diffless
 
 function grepless
-    grep --color=always $argv | less -r
+    grep $argv | less --tabs=4 -RFX
 end
 funcsave grepless
