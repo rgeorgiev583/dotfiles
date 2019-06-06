@@ -1,5 +1,5 @@
 function diff
-	gdiff $argv | diff-so-fancy | less --tabs=4 -RFX
+	gdiff -u --color $argv | diff-so-fancy | less --tabs=4 -RFX
 end
 funcsave diff
 
