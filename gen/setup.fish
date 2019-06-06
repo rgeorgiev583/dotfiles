@@ -1,7 +1,7 @@
 fish setup-functions.fish
 fish setup-abbreviations.fish
 if test $argv[1] = generate-git
-	if test $argv[2] = alias
+	if test $argv[2] = aliases
 		fish setup-git-aliases.fish
 	else
 		fish setup-git-abbreviations.fish
