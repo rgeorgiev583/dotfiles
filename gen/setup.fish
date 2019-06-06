@@ -1,4 +1,5 @@
 fish setup-functions.fish
+fish setup-abbreviations.fish
 if test $argv[1] = alias
 	fish setup-git-aliases.fish
 else
