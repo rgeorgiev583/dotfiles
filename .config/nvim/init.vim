@@ -1,1 +1,0 @@
-/home/sid/.oh-my-neovim/init.vim
