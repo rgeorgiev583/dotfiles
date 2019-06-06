@@ -8,8 +8,6 @@ function grep
 end
 funcsave grep
 
-alias -s makej 'make -j'(math (nproc) + 1)
 alias -s cachemake "make CC='ccache gcc' CXX='ccache g++'"
-alias -s cachemakej 'cachemake -j'(math (nproc) + 1)
 
 alias -s free 'free -h'
