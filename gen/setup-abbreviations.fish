@@ -1,3 +1,5 @@
+mkdir -p ~/.config/fish/conf.d
+
 if test -f abbreviations.fish
 	cp abbreviations.fish ~/.config/fish/conf.d/
 end

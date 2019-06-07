@@ -1,3 +1,5 @@
+mkdir -p ~/.config/fish/conf.d
+
 fish setup-functions.fish
 fish setup-abbreviations.fish
 if test (count $argv) -ge 1; and test $argv[1] = generate-git
