@@ -1,10 +1,10 @@
 function diff
-	gdiff -u --color $argv | diff-so-fancy | less --tabs=4 -RFX
+	gdiff -u --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
 end
 funcsave diff
 
 function grep
-	ggrep --color $argv | less --tabs=4 -RFX
+	ggrep --color=always $argv | less --tabs=4 -RFX
 end
 funcsave grep
 
