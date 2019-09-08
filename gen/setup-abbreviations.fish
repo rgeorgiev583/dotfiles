@@ -1,7 +1,7 @@
 mkdir -p $HOME/.config/fish/conf.d
 
 if test -f abbreviations.fish
-	cp abbreviations.fish ~/.config/fish/conf.d/
+	cp abbreviations.fish $HOME/.config/fish/conf.d/
 end
 
 set os_name (uname)
