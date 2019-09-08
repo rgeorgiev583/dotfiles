@@ -4,3 +4,4 @@ fish setup-functions.fish
 fish setup-abbreviations.fish
 fish setup-git.fish copy
 fish setup-fisher.fish
+fish setup-fzf.fish
