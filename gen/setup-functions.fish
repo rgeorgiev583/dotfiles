@@ -1,12 +1,12 @@
 #!/usr/bin/env fish
 
-if test -f functions.fish
-	source functions.fish
-end
+source functions.fish
 
-set os_name (uname)
-if test $os_name = Linux; and test -f functions.linux.fish
-	source functions.linux.fish
-else if test $os_name = Darwin; and test -f functions.macos.fish
-	source functions.macos.fish
+switch (uname)
+	case Linux
+		source functions.linux.fish
+	case Darwin
+		source functions.macos.fish
+	case '*'
+		echo 'error: OS not supported' >&2
 end
