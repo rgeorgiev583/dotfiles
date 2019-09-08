@@ -1,3 +1,5 @@
+#!/usr/bin/env fish
+
 mkdir -p $HOME/.config/fish/conf.d
 
 if test -f abbreviations.fish

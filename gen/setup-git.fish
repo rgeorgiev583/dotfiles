@@ -1,8 +1,10 @@
+#!/usr/bin/env fish
+
 if test (count $argv) -ge 1; and test $argv[1] = generate
 	if test (count $argv) -ge 2; and test $argv[2] = git-aliases
-		fish generate-git-aliases.fish
+		./generate-git-aliases.fish
 	else
-		fish generate-git-abbreviations.fish
+		./generate-git-abbreviations.fish
 	end
 end
 
