@@ -90,8 +90,9 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias df='df -h'      # human-readable sizes
-alias free='free -m'  # show sizes in MB
+# human-readable sizes
+alias df='df -h'
+alias free='free -h'
 
 xhost +local:root > /dev/null 2>&1
 
