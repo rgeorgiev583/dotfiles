@@ -1,5 +1,5 @@
-abbr -a -g makej 'make -j'(math (nproc) + 1)
-abbr -a -g cachemakej 'cachemake -j'(math (nproc) + 1)
+abbr -a makej 'make -j'(math (nproc) + 1)
+abbr -a cachemakej 'cachemake -j'(math (nproc) + 1)
 
-abbr -a -g sc 'systemctl'
-abbr -a -g jc 'journalctl'
+abbr -a sc 'systemctl'
+abbr -a jc 'journalctl'

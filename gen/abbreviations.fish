@@ -1,1 +1,1 @@
-abbr -a -g e $EDITOR
+abbr -a e $EDITOR
