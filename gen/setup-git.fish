@@ -1,9 +1,9 @@
 if test (count $argv) -ge 1
 	if test $argv[1] = generate
 		if test (count $argv) -ge 2; and test $argv[2] = git-aliases
-			fish setup-git-aliases.fish
+			fish generate-git-aliases.fish
 		else
-			fish setup-git-abbreviations.fish
+			fish generate-git-abbreviations.fish
 		end
 	else if test $argv[1] = copy
 		if test (count $argv) -ge 2; and test $argv[2] = git-aliases; and test -f ../.config/fish/conf.d/git-aliases.fish
