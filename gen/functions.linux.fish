@@ -8,6 +8,4 @@ function grep
 end
 funcsave grep
 
-alias -s cachemake "make CC='ccache gcc' CXX='ccache g++'"
-
 alias -s free 'free -h'
