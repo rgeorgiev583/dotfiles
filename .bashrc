@@ -115,6 +115,3 @@ shopt -s histappend
 source $HOME/.oh-my-neovim/tools/functions.sh
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
-
-# finally, drop into `fish`
-exec fish
