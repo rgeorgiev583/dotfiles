@@ -1,7 +1,5 @@
 #!/usr/bin/env fish
 
-mkdir -p $HOME/.config/fish/conf.d
-
 cp abbreviations.fish $HOME/.config/fish/conf.d/
 
 switch (uname)
