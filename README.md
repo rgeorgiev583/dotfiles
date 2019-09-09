@@ -5,6 +5,7 @@ Some configuration files I've tweaked to my own use and benefit which I thought 
 
 # Prerequisites
 
-* [antigen](https://github.com/zsh-users/antigen)
-    * installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) automagically
-* [oh-my-vim](https://github.com/liangxianzhe/oh-my-vim)
+* [Git](https://git-scm.com/)
+* [fish](https://fishshell.com/)
+* [Neovim](https://neovim.io/)
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
