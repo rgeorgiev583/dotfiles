@@ -14,9 +14,6 @@ export LESS_TERMCAP_us=$'\E[01;36m'
 # run `make` with as many jobs in parallel as there as processors
 export MAKEFLAGS="-j$(nproc)"
 
-# use `powerpill` as a `pacman` substitute
-export PACMAN=powerpill
-
 # set Oh My Neovim path and list of extensions to load
 export OH_MY_NEOVIM=${HOME}/.oh-my-neovim
 export OH_MY_NEOVIM_EXTENSIONS='default clang code_style git go gpg icons json mouse neomake search session smooth_scroll snippet spell test themes true_color undo vim xml yaml'
