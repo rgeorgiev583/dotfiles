@@ -1,3 +1,5 @@
 #!/usr/bin/env fish
 
-fisher add jethrokuan/fzf
+if type fzf > /dev/null 2> /dev/null
+	fisher add jethrokuan/fzf
+end
