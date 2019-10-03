@@ -7,6 +7,8 @@ switch (uname)
 		source functions.linux.fish
 	case Darwin
 		source functions.macos.fish
+	case 'MSYS*'
+		source functions.msys.fish
 	case '*'
 		echo 'error: OS not supported' >&2
 end
