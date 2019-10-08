@@ -3,7 +3,9 @@ function diff
 end
 funcsave diff
 
-function grep
+alias -s grep ggrep
+
+function grepl
 	ggrep --color=always $argv | less --tabs=4 -RFX
 end
-funcsave grep
+funcsave grepl

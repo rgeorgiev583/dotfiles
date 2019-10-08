@@ -3,9 +3,9 @@ function diff
 end
 funcsave diff
 
-function grep
-	command grep --color=always $argv | less --tabs=4 -RFX
+function grepl
+	grep --color=always $argv | less --tabs=4 -RFX
 end
-funcsave grep
+funcsave grepl
 
 alias -s free 'free -h'
