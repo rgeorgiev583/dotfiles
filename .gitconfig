@@ -6,7 +6,7 @@
 [rerere]
 	enabled = true
 [core]
-	pager = delta --dark
+	pager = delta
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
