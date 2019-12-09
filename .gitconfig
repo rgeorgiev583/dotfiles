@@ -15,5 +15,11 @@
 	cmd = codium --wait --diff $LOCAL $REMOTE
 [merge]
 	conflictstyle = diff3
+	tool = nvim_mergetool
+[mergetool "nvim_mergetool"]
+	cmd = nvim -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+	trustExitCode = true
+[mergetool "vscodium"]
+	cmd = codium --wait $MERGED
 [submodule]
 	fetchJobs = 0
