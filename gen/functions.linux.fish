@@ -8,4 +8,4 @@ function grepl
 end
 funcsave grepl
 
-alias --save free 'free -h'
+alias --save free 'free --human'
