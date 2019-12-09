@@ -11,7 +11,7 @@
 	tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE
-[difftool "codium"]
+[difftool "vscodium"]
 	cmd = codium -wd $LOCAL $REMOTE
 [merge]
 	conflictstyle = diff3
