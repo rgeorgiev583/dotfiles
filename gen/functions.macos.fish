@@ -1,9 +1,9 @@
 function diff
-	gdiff -u --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
+	gdiff --unified --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
 end
 funcsave diff
 
-alias -s grep ggrep
+alias --save grep ggrep
 
 function grepl
 	ggrep --color=always $argv | less --tabs=4 -RFX

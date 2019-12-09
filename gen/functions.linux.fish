@@ -1,5 +1,5 @@
 function diff
-	command diff -u --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
+	command diff --unified --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
 end
 funcsave diff
 
@@ -8,4 +8,4 @@ function grepl
 end
 funcsave grepl
 
-alias -s free 'free -h'
+alias --save free 'free -h'
