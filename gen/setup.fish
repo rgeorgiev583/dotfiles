@@ -2,6 +2,7 @@
 
 mkdir -p $HOME/.config/fish/conf.d
 
+./setup-environment.fish
 ./setup-functions.fish
 ./setup-abbreviations.fish
 ./setup-git.fish
