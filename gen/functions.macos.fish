@@ -1,5 +1,5 @@
 function diff
-	gdiff --unified --color=always $argv | diff-so-fancy | less --tabs=4 -RFX
+	gdiff --unified --color=always $argv | delta
 end
 funcsave diff
 
