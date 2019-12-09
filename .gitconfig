@@ -3,16 +3,16 @@
 	name = Radoslav Georgiev
 [credential]
 	helper = store
-[merge]
-	conflictstyle = diff3
 [rerere]
 	enabled = true
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [difftool "nvimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE
 [difftool "codium"]
 	cmd = codium -wd $LOCAL $REMOTE
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+[merge]
+	conflictstyle = diff3
 [color]
 	ui = true
 [color "diff-highlight"]
