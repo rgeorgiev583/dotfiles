@@ -1,6 +1,6 @@
 #!/bin/fish
 
-if grep -E '(ID|ID_LIKE)=arch' /etc/os-release > /dev/null
+if egrep '(ID|ID_LIKE)=arch' /etc/os-release > /dev/null
 	yay -S --needed neovim fzf diff-so-fancy
 else
 	echo 'error: OS not supported' >&2
