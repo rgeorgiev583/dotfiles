@@ -14,5 +14,3 @@ set --export LESS_TERMCAP_us \e\[01\;36m
 # set Oh My Neovim path and list of extensions to load
 set --export OH_MY_NEOVIM $HOME/.oh-my-neovim
 set --export OH_MY_NEOVIM_EXTENSIONS 'default clang code_style git go gpg icons json mouse neomake search session smooth_scroll snippet spell test themes true_color undo vim xml yaml'
-
-set --universal fish_user_paths $HOME/.gem/ruby/2.6.0/bin $HOME/.node_modules_global/bin $HOME/.cargo/bin $HOME/go/bin
