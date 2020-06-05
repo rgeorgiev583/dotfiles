@@ -24,3 +24,5 @@
 	cmd = codium --wait $MERGED
 [submodule]
 	fetchJobs = 0
+[pull]
+	rebase = true
