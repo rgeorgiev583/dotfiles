@@ -7,6 +7,7 @@
 	enabled = true
 [core]
 	pager = delta
+	whitespace = cr-at-eol
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
