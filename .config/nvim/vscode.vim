@@ -28,7 +28,7 @@ set undofile
 set undodir=~/.config/nvim/undo/
 
 " use ",," to go to normal mode
-vnoremap <leader><leader> <ESC>
+"vnoremap <leader><leader> <ESC>
 "inoremap <leader><leader> <ESC>
 
 nmap <leader>w :w<CR>

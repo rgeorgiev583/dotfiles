@@ -11,7 +11,7 @@ Plug 'romgrk/vim-session'
 Plug 'fatih/vim-go'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'marxin/neo-rtags', { 'do': ':UpdateRemotePlugins', 'for': ['c', 'cpp', 'objc', 'objcpp', 'dtrace', 'ch', 'cmod', 'xs', 'rpcgen', 'splint', 'cuda', 'cynlib', 'arduino', 'esqlc', 'kwt'] }
+"Plug 'marxin/neo-rtags', { 'do': ':UpdateRemotePlugins', 'for': ['c', 'cpp', 'objc', 'objcpp', 'dtrace', 'ch', 'cmod', 'xs', 'rpcgen', 'splint', 'cuda', 'cynlib', 'arduino', 'esqlc', 'kwt'] }
 "Plug 'lyuts/vim-rtags', { 'for': ['c', 'cpp', 'objc', 'objcpp', 'dtrace', 'ch', 'cmod', 'xs', 'rpcgen', 'splint', 'cuda', 'cynlib', 'arduino', 'esqlc', 'kwt'] }
 "Plug 'rbong/vim-flog'
 Plug 'junegunn/fzf.vim'
@@ -23,3 +23,5 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-entire'
 Plug 'gisphm/vim-gitignore'
+Plug 'ludovicchabant/vim-gutentags'
+"Plug 'skywind3000/gutentags_plus'

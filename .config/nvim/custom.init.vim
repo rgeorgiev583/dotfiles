@@ -84,6 +84,10 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime
 " search in selection
 vnoremap <A-/> <Esc>/\%V
 
+nmap <silent> <leader>e :Explore<CR>
+
+set wrap
+
 """ Plugin config
 
 "augroup Flog
@@ -149,6 +153,11 @@ nmap <silent> <leader><F8> :Tagbar<CR>
 "" vimspector config
 let g:vimspector_install_gadgets = ['vscode-cpptools']
 
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         50,
+  \    'vimspectorPC':         70,
+  \ }
+
 nmap <F5>         <Plug>VimspectorContinue
 nmap <F3>         <Plug>VimspectorStop
 nmap <F4>         <Plug>VimspectorRestart
@@ -199,3 +208,20 @@ nnoremap <leader>s :Rg <C-r><C-w><CR>
 
 "" neomake config
 let g:neomake_open_list = 2
+
+"" gutentags config
+
+" enable gtags module
+"let g:gutentags_modules = ['ctags', 'gtags_cscope']
+
+" config project root markers.
+"let g:gutentags_project_root = ['.root']
+
+" generate datebases in my cache directory, prevent gtags files polluting my project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+" change focus to quickfix window after search (optional).
+"let g:gutentags_plus_switch = 1
+
+" enable all kinds of tags for C++
+let g:gutentags_ctags_extra_args = ['--kinds-C++=*']
