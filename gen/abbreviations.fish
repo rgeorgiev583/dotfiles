@@ -3,6 +3,8 @@ if set -q EDITOR
 	abbr --add es $EDITOR-session
 end
 
+abbr --add x exit
+
 ## Linux-specific definitions
 
 abbr --add sc 'systemctl'
