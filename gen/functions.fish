@@ -10,6 +10,23 @@ function fdl
 end
 funcsave fdl
 
+function nvim
+	command nvim -s (echo ':silent call xolox#session#auto_load()' | psub) $argv
+end
+funcsave nvim
+
+function nvim-session
+	if test (count $argv) -eq 0
+		set session $PWD
+	else
+		set session $argv[1]
+	end
+	#nvim -s (begin; echo :silent CloseSession; echo ":silent! OpenSession $session"; echo ":silent SaveSession $session"; end | psub) $argv[2..-1]
+	#command nvim -s (begin; echo ":silent MakeSession $session"; echo ":silent OpenSession $session"; end | psub) $argv[2..-1]
+	command nvim -s (begin; echo ":silent! OpenSession $session"; echo ":silent SaveSession $session"; end | psub) $argv[2..-1]
+end
+funcsave nvim-session
+
 ## Linux-specific definitions
 
 function diff
