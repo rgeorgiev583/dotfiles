@@ -50,8 +50,8 @@ inoremap <leader><leader> <ESC>
 nunmap <leader>d
 nmap <silent> <leader>dd :bd<CR>
 
-execute 'command -nargs=* -bang Makej make<bang> -j' . system('nproc') . ' <args>'
-nmap <silent> <leader>B :Makej!<CR>
+"execute 'command -nargs=* -bang Makej make<bang> -j' . system('nproc') . ' <args>'
+"nmap <silent> <leader>B :Makej!<CR>
 
 " use Leader+Q to toggle the quickfix window
 "nmap <silent> <leader>Q :call ToggleDisplayState('is_cwindow_open', 'cwindow', 'cclose', 0)<CR>
