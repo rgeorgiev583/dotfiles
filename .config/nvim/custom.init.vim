@@ -168,7 +168,7 @@ nmap <F10>        <Plug>VimspectorStepOver
 nmap <F11>        <Plug>VimspectorStepInto
 
 nmap <silent> <C-D> :call ToggleDisplayState('is_vimspector_open', 'call vimspector#Launch()', 'VimspectorReset', 0)<CR>
-command -nargs=1 D call vimspector#LaunchWithSettings(#{configuration: '<args>'})
+command -nargs=1 D call vimspector#LaunchWithSettings({'configuration': '<args>'})
 nmap <leader><F11> <Plug>VimspectorStepOut
 nmap <leader>dtb :call vimspector#ToggleBreakpoint
 nmap <leader>dfb <Plug>VimspectorAddFunctionBreakpoint
