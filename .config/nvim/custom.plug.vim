@@ -4,6 +4,12 @@ Plug 'samoshkin/vim-mergetool'
 "Plug 'Yohannfra/Vim-Goto-Header', { 'for': ['c', 'cpp', 'objc', 'objcpp', 'dtrace', 'ch', 'cmod', 'xs', 'rpcgen', 'splint', 'cuda', 'cynlib', 'arduino', 'esqlc', 'kwt'] }
 "Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' }
 "let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         999,
+  \    'vimspectorBPCond':     999,
+  \    'vimspectorBPDisabled': 999,
+  \    'vimspectorPC':         999,
+  \ }
 Plug 'puremourning/vimspector'
 Plug 'romgrk/vim-session'
 "Plug 'vim-syntastic/syntastic'
