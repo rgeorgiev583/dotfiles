@@ -225,3 +225,5 @@ let g:gutentags_cache_dir = expand('~/.cache/tags')
 
 " enable all kinds of tags for C++
 let g:gutentags_ctags_extra_args = ['--kinds-C++=*']
+
+nmap <silent> <leader>fa :Autoformat<CR>
