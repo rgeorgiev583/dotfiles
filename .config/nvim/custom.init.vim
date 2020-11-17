@@ -113,7 +113,7 @@ nmap <silent> <leader>fzi :call fzf#run({'source': 'fd -H -t f -t l 2> /dev/null
 "let g:ale_linters = {'c': ['clang', 'clangtidy', 'flawfinder', 'gcc'], 'cpp': ['clang', 'clangcheck', 'clangtidy', 'clazy', 'cpplint', 'flawfinder', 'gcc']}
 let g:ale_linters = {'c': [], 'cpp': []}
 "let g:ale_linters.python = ['flake8', 'mypy', 'pylint', 'pyls']
-"let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 1
 
 "" NERDCommenter config
 " map the NERDCommenterInvert command to Ctrl+/
