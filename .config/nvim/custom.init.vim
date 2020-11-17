@@ -175,8 +175,8 @@ nmap <leader>dfb <Plug>VimspectorAddFunctionBreakpoint
 nmap <leader>dafb :call vimspector#AddFunctionBreakpoint
 nmap <silent> <leader>dlb :call vimspector#ListBreakpoints()<CR>
 nmap <silent> <leader>dcb :call vimspector#ClearBreakpoints()<CR>
-sign define vimspectorBP text=🔴 texthl=Normal
-sign define vimspectorBPDisabled text=🔵 texthl=Normal
+"sign define vimspectorBP text=🔴 texthl=Normal
+"sign define vimspectorBPDisabled text=🔵 texthl=Normal
 "sign define vimspectorPC text=🔶 texthl=SpellBad
 
 "" syntastic config
