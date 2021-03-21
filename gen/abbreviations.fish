@@ -5,7 +5,5 @@ end
 
 abbr --add x exit
 
-## Linux-specific definitions
-
 abbr --add sc 'systemctl'
 abbr --add jc 'journalctl'

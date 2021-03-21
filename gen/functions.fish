@@ -39,8 +39,6 @@ function nvim-session
 end
 funcsave nvim-session
 
-## Linux-specific definitions
-
 function diff
 	command diff --unified --color=always $argv | delta
 end
