@@ -1,5 +1,3 @@
-alias -s df 'df -h'
-
 function rgl
 	rg --line-number --color=always $argv | less --tabs=4 -RFX
 end
@@ -29,11 +27,6 @@ function fdal
 	fda --color=always $argv | less --tabs=4 -RFX
 end
 
-function nvim
-	command nvim -s (echo ':silent call xolox#session#auto_load()' | psub) $argv
-end
-funcsave nvim
-
 function nvim-session
 	if test (count $argv) -eq 0
 		set session $PWD
@@ -57,5 +50,3 @@ function grepl
 	grep --color=always $argv | less --tabs=4 -RFX
 end
 funcsave grepl
-
-alias --save free 'free --human'
