@@ -13,7 +13,7 @@ set --export LESS_TERMCAP_us \e\[01\;36m
 
 # set Oh My Neovim path and list of extensions to load
 set --export OH_MY_NEOVIM $HOME/.oh-my-neovim
-set --export OH_MY_NEOVIM_EXTENSIONS 'default clang code_style git go gpg icons json mouse neomake search session smooth_scroll snippet spell test themes true_color undo vim xml yaml'
+set --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg icons json mouse neomake search session spell true_color undo xml yaml'
 
 # run `make` with as many jobs in parallel as there as processors
 set --export MAKEFLAGS -j(nproc)
