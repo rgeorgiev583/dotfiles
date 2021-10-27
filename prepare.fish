@@ -5,4 +5,4 @@ if not egrep -q '(ID|ID_LIKE)=arch' /etc/os-release
 	exit 1
 end
 
-yay --sync --needed neovim fzf diff-so-fancy git-delta fd ripgrep fisher
+yay --sync --needed neovim fzf git-delta fd ripgrep fisher
