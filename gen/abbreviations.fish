@@ -2,6 +2,8 @@ if set -q EDITOR
 	abbr --add e $EDITOR
 end
 
+abbr --add df df -h
+abbr --add free free -h
 abbr --add rga rg --hidden --no-ignore
 abbr --add fda fd --hidden --no-ignore
 abbr --add d docker
