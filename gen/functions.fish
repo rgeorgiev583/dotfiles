@@ -19,7 +19,7 @@ end
 funcsave fdal
 
 function diff
-	command diff --unified --color=always $argv | delta
+	command diff --unified $argv | delta
 end
 funcsave diff
 
