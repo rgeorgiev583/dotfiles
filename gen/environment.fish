@@ -13,7 +13,7 @@ set --universal --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg ico
 set --universal --export MAKEFLAGS -j(nproc)
 
 # make `fzf` use fd(1)
-set --universal --export FZF_DEFAULT_COMMAND 'fd -t f -t l 2> /dev/null'
+set --universal --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidden --exclude .git 2> /dev/null'
 
 # make `ripgrep` read its config file
 set --universal --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
