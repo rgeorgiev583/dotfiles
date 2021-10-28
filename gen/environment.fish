@@ -7,7 +7,7 @@ set --universal --export DIFFPROG 'nvim -d'
 
 # set Oh My Neovim path and list of extensions to load
 set --universal --export OH_MY_NEOVIM $HOME/.oh-my-neovim
-set --universal --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg icons json mouse neomake search session spell true_color undo xml yaml'
+set --universal --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg icons json mouse search session spell true_color undo xml yaml'
 
 # run `make` with as many jobs in parallel as there as processors
 set --universal --export MAKEFLAGS -j(nproc)
