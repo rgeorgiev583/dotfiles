@@ -12,7 +12,7 @@ set --universal --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg ico
 # run `make` with as many jobs in parallel as there as processors
 set --universal --export MAKEFLAGS -j(nproc)
 
-# make `fzf` search through hidden files as well
+# make `fzf` use fd(1)
 set --universal --export FZF_DEFAULT_COMMAND 'fd -t f -t l 2> /dev/null'
 
 # make `ripgrep` read its config file
