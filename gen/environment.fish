@@ -2,6 +2,9 @@
 set --universal --export EDITOR nvim
 set --universal --export VISUAL nvim
 
+# set default diff tool
+set --universal --export DIFFPROG 'nvim -d'
+
 # set Oh My Neovim path and list of extensions to load
 set --universal --export OH_MY_NEOVIM $HOME/.oh-my-neovim
 set --universal --export OH_MY_NEOVIM_EXTENSIONS 'default code_style git gpg icons json mouse neomake search session spell true_color undo xml yaml'
