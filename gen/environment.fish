@@ -20,4 +20,4 @@ set --universal --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
 
 ## Linux-specific definitions
 
-fish_add_path $HOME/.gem/ruby/2.7.0/bin $HOME/.node_modules_global/bin $HOME/.cargo/bin $HOME/go/bin $HOME/.local/bin
+fish_add_path $HOME/.gem/ruby/3.0.0/bin $HOME/.node_modules_global/bin $HOME/.cargo/bin $HOME/go/bin $HOME/.local/bin
