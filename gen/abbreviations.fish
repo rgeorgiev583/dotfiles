@@ -9,8 +9,8 @@ abbr --add fda fd --hidden --no-ignore
 abbr --add d docker
 abbr --add dc docker-compose
 
-## Linux-specific definitions
+# Linux-specific definitions
 
 abbr --add free free -h
-abbr --add sc 'systemctl'
-abbr --add jc 'journalctl'
+abbr --add sc systemctl
+abbr --add jc journalctl
