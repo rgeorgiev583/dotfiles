@@ -10,6 +10,9 @@
 	whitespace = cr-at-eol
 [diff]
 	tool = nvimdiff
+[diff "sqlite3"]
+	binary = true
+	textconv = "echo .dump | sqlite3"
 [difftool "nvimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE
 [difftool "vscode"]
