@@ -29,3 +29,10 @@
 	fetchJobs = 0
 [pull]
 	rebase = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    line-numbers = true
+[diff]
+    colorMoved = default
