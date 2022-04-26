@@ -28,7 +28,7 @@ abbr --add --global dsta "$docker_cmd start"
 abbr --add --global dst "$docker_cmd stop"
 abbr --add --global dt "$docker_cmd tag"
 
-set docker_compose_cmd docker-compose
+set docker_compose_cmd docker compose
 
 abbr --add --global dc "$docker_compose_cmd"
 abbr --add --global dce "$docker_compose_cmd exec"
