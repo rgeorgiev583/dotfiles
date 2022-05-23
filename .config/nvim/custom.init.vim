@@ -41,7 +41,7 @@ endfunction
 nmap <silent> <leader>L :lopen<CR>
 nmap <silent> <leader>k :Lprev<CR>
 
-" use ",," to go to normal mode
+" use Leader+Leader to go to normal mode
 vnoremap <leader><leader> <ESC>
 inoremap <leader><leader> <ESC>
 
