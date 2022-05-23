@@ -88,6 +88,8 @@ nmap <silent> <leader>e :Explore<CR>
 
 set wrap
 
+nmap <silent> <leader>B :CtrlPBuffer<CR>
+
 """ Plugin config
 
 "augroup Flog
@@ -194,6 +196,9 @@ nmap <silent> <leader>dcb :call vimspector#ClearBreakpoints()<CR>
 nmap <leader>ghs <Plug>(GitGutterStageHunk)
 nmap <leader>ghu <Plug>(GitGutterUndoHunk)
 nmap <leader>ghp <Plug>(GitGutterPreviewHunk)
+vmap <leader>ghs <Plug>(GitGutterStageHunk)
+vmap <leader>ghu <Plug>(GitGutterUndoHunk)
+vmap <leader>ghp <Plug>(GitGutterPreviewHunk)
 
 "" deoplete config
 "let g:deoplete#enable_at_startup = 1
