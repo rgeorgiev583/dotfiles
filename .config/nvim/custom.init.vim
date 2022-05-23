@@ -113,7 +113,8 @@ nmap <silent> <leader>fzi :call fzf#run({'source': 'fd -H -t f -t l 2> /dev/null
 "" ALE config
 " disable LSP-based C/C++ linters (ccls, clangd and cquery), as well as cppcheck, as they consume too much CPU and RAM
 "let g:ale_linters = {'c': ['clang', 'clangtidy', 'flawfinder', 'gcc'], 'cpp': ['clang', 'clangcheck', 'clangtidy', 'clazy', 'cpplint', 'flawfinder', 'gcc']}
-let g:ale_linters = {'c': [], 'cpp': []}
+let g:ale_linters = {'c': [], 'cpp': [], 'go': ['gopls']}
+"let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'go': ['gopls']}
 "let g:ale_linters.python = ['flake8', 'mypy', 'pylint', 'pyls']
 let g:ale_completion_enabled = 1
 
