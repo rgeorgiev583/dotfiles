@@ -118,6 +118,10 @@ let g:ale_linters = {'c': [], 'cpp': [], 'go': ['gopls']}
 "let g:ale_linters.python = ['flake8', 'mypy', 'pylint', 'pyls']
 let g:ale_completion_enabled = 1
 
+" vim-go config
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
+
 "" NERDCommenter config
 " map the NERDCommenterInvert command to Ctrl+/
 nmap <silent> <leader>/ :call NERDComment('n', 'Invert')<CR>
@@ -214,6 +218,7 @@ nnoremap <leader>s :Rg <C-r><C-w><CR>
 
 "" neomake config
 let g:neomake_open_list = 2
+"let g:neomake_cpp_enabled_makers = []
 
 "" gutentags config
 
