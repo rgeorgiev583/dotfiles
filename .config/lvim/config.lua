@@ -18,7 +18,49 @@ lvim.colorscheme = "vscode"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
+-- Windows-style keybindings
+lvim.keys.normal_mode["<Tab>"] = ">>"
+lvim.keys.visual_mode["<Tab>"] = ">gv"
+lvim.keys.normal_mode["<S-Tab>"] = "<<"
+lvim.keys.insert_mode["<S-Tab>"] = "<Esc><<i"
+lvim.keys.visual_mode["<S-Tab>"] = "<gv"
+lvim.keys.visual_mode["<C-x>"] = "d"
+lvim.keys.visual_mode["<C-c>"] = "y"
+lvim.keys.normal_mode["<C-a>"] = "ggVG"
+lvim.keys.insert_mode["<C-a>"] = "<Esc>ggVGi"
+lvim.keys.visual_mode["<C-a>"] = "<Esc>ggVG"
+lvim.keys.normal_mode["<C-z>"] = "u"
+lvim.keys.insert_mode["<C-z>"] = "<Esc>ui"
+lvim.keys.visual_mode["<C-z>"] = "<Esc>u"
+lvim.keys.normal_mode["<C-y>"] = "R"
+lvim.keys.insert_mode["<C-y>"] = "<Esc>Ri"
+lvim.keys.visual_mode["<C-y>"] = "<Esc>R"
+lvim.keys.normal_mode["<C-f>"] = "/"
+lvim.keys.insert_mode["<C-f>"] = "<Esc>/"
+lvim.keys.visual_mode["<C-f>"] = "<Esc>/"
+lvim.keys.normal_mode["<C-g>"] = ":"
+lvim.keys.insert_mode["<C-g>"] = "<Esc>:"
+lvim.keys.visual_mode["<C-g>"] = "<Esc>:"
+lvim.keys.normal_mode["<C-o>"] = ":e "
+lvim.keys.insert_mode["<C-o>"] = "<Esc>:e "
+lvim.keys.visual_mode["<C-o>"] = "<Esc>:e "
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.insert_mode["<C-s>"] = "<Esc>:w<cr>i"
+lvim.keys.visual_mode["<C-s>"] = "<Esc>:w<cr>"
+-- navigate between buffers
+lvim.keys.normal_mode["<A-Left>"] = ":bp<CR>"
+lvim.keys.insert_mode["<A-Left>"] = "<Esc>:bp<CR>i"
+lvim.keys.visual_mode["<A-Left>"] = "<Esc>:bp<CR>"
+lvim.keys.normal_mode["<A-Right>"] = ":bn<CR>"
+lvim.keys.insert_mode["<A-Right>"] = "<Esc>:bn<CR>i"
+lvim.keys.visual_mode["<A-Right>"] = "<Esc>:bn<CR>"
+lvim.keys.normal_mode["<leader><Left>"] = ":bp<CR>"
+lvim.keys.normal_mode["<leader><Right>"] = ":bn<CR>"
+-- close the current buffer
+lvim.keys.normal_mode["<leader>cc"] = ":bd!<CR>"
+-- search in selection
+lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -153,6 +195,22 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 lvim.plugins = {
   { "Mofiqul/vscode.nvim" },
+  {
+    "tpope/vim-surround",
+    keys = { "c", "d", "y" }
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+    --  vim.o.timeoutlen = 500
+    -- end
+  },
+  { "justinmk/vim-sneak" },
+  { "vim-scripts/ReplaceWithRegister" },
+  { "easymotion/vim-easymotion" },
+  { "bkad/CamelCaseMotion" },
+  { "nelstrom/vim-visual-star-search" },
+  { "kana/vim-textobj-user" },
+  { "kana/vim-textobj-function" },
+  { "kana/vim-textobj-entire" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
