@@ -13,3 +13,5 @@ set --global --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidde
 
 # make `ripgrep` read its config file
 set --global --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
+
+fish_add_path ~/.local/bin
