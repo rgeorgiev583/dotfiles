@@ -1,9 +1,9 @@
-# set Neovim as the default editor
-set --global --export EDITOR nvim
-set --global --export VISUAL nvim
+# set LunarVim as the default editor
+set --global --export EDITOR lvim
+set --global --export VISUAL lvim
 
-# set default diff tool
-set --global --export DIFFPROG 'nvim -d'
+# set LunarVim as the default diff tool
+set --global --export DIFFPROG 'lvim -d'
 
 # run `make` with as many jobs in parallel as there as processors
 set --global --export MAKEFLAGS -j(nproc)

@@ -9,19 +9,19 @@
 	pager = delta
 	whitespace = cr-at-eol
 [diff]
-	tool = nvimdiff
+	tool = lvimdiff
 [diff "sqlite3"]
 	binary = true
 	textconv = "echo .dump | sqlite3"
-[difftool "nvimdiff"]
-	cmd = nvim -d $LOCAL $REMOTE
+[difftool "lvimdiff"]
+	cmd = lvim -d $LOCAL $REMOTE
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	conflictstyle = diff3
-	tool = nvim_mergetool
-[mergetool "nvim_mergetool"]
-	cmd = nvim -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+	tool = lvim_mergetool
+[mergetool "lvim_mergetool"]
+	cmd = lvim -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
 	trustExitCode = true
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
