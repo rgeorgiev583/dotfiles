@@ -60,6 +60,8 @@ lvim.keys.normal_mode["<leader><Right>"] = ":bn<CR>"
 lvim.keys.normal_mode["<leader>cc"] = ":bd!<CR>"
 -- search in selection
 lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
+-- exit with saving
+lvim.keys.normal_mode["<leader>x"] = ":x<CR>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -95,6 +97,12 @@ lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
 -- }
+lvim.builtin.which_key.mappings["S"] = { "<cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
+-- search current word
+lvim.builtin.which_key.mappings["W"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search for current word with Spectre" }
+lvim.builtin.which_key.vmappings["S"] = { "<cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
+-- search in current file
+lvim.builtin.which_key.mappings["F"] = { "<cmd>lua require('spectre').open_file_search()<CR>", "Search/replace in current file with Spectre" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -210,7 +218,33 @@ lvim.plugins = {
   { "nelstrom/vim-visual-star-search" },
   { "kana/vim-textobj-user" },
   { "kana/vim-textobj-function" },
-  { "kana/vim-textobj-entire" }
+  { "kana/vim-textobj-entire" },
+  {
+    "lambdalisue/suda.vim",
+    setup = function()
+      vim.g.suda_smart_edit = 1
+    end
+  },
+  { "samoshkin/vim-mergetool" },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    setup = function()
+      vim.g.indentLine_enabled = 1
+      vim.g.indent_blankline_char = "▏"
+      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+      vim.g.indent_blankline_buftype_exclude = { "terminal" }
+      vim.g.indent_blankline_show_trailing_blankline_indent = false
+      vim.g.indent_blankline_show_first_indent_level = false
+    end
+  },
+  {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
