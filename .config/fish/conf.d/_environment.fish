@@ -19,4 +19,6 @@ set --global --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidde
 # make `ripgrep` read its config file
 set --global --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
 
+set --global --export DOTNET_CLI_TELEMETRY_OPTOUT 1
+
 fish_add_path ~/.local/bin
