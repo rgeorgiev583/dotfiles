@@ -15,6 +15,10 @@ lvim.colorscheme = "vscode"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.wrap = true
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
