@@ -14,7 +14,7 @@ set --global --export MAKEFLAGS -j(nproc)
 set --global --export DEBUGINFOD_URLS (cat /etc/debuginfod/archlinux.urls)
 
 # make `fzf` use fd(1)
-set --global --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidden 2> /dev/null'
+set --global --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidden --exclude .git 2> /dev/null'
 
 # make `ripgrep` read its config file
 set --global --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
