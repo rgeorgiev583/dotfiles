@@ -103,10 +103,13 @@ lvim.keys.normal_mode["<leader>x"] = ":x<CR>"
 -- }
 lvim.builtin.which_key.mappings["S"] = { "<cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
 -- search current word
-lvim.builtin.which_key.mappings["W"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", "Search for current word with Spectre" }
-lvim.builtin.which_key.vmappings["S"] = { "<cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
+lvim.builtin.which_key.mappings["W"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+  "Search for current word with Spectre" }
+lvim.builtin.which_key.vmappings["S"] = { "<cmd>lua require('spectre').open_visual()<CR>",
+  "Search for current selection with Spectre" }
 -- search in current file
-lvim.builtin.which_key.mappings["F"] = { "<cmd>lua require('spectre').open_file_search()<CR>", "Search/replace in current file with Spectre" }
+lvim.builtin.which_key.mappings["F"] = { "<cmd>lua require('spectre').open_file_search()<CR>",
+  "Search/replace in current file with Spectre" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -115,7 +118,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default"
 
 -- if you don't want all the parsers change this to a table of the ones you want
