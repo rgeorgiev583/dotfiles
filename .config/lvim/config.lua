@@ -251,7 +251,7 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("spectre").setup()
-    end,
+    end
   },
   { "jessarcher/vim-heritage" }
 }
