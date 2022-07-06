@@ -19,6 +19,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.wrap = true
 
+vim.o.background = "light"
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
