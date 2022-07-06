@@ -255,7 +255,8 @@ lvim.plugins = {
       require("spectre").setup()
     end
   },
-  { "jessarcher/vim-heritage" }
+  { "jessarcher/vim-heritage" },
+  { "editorconfig/editorconfig-vim" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
