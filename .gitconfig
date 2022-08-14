@@ -39,3 +39,5 @@
 	colorMoved = default
 [init]
 	defaultBranch = main
+[fetch]
+	prune = true
