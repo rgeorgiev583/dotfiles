@@ -11,7 +11,9 @@ set --global --export MANPAGER 'less -R --use-color -Dd+g -Du+c'
 # run `make` with as many jobs in parallel as there as processors
 set --global --export MAKEFLAGS -j(nproc)
 
-set --global --export DEBUGINFOD_URLS (cat /etc/debuginfod/archlinux.urls)
+if test (count /etc/debuginfod/*.urls) -gt 0
+    set --global --export DEBUGINFOD_URLS (cat /etc/debuginfod/*.urls)
+end
 
 # make `fzf` use fd(1)
 set --global --export FZF_DEFAULT_COMMAND 'fd --type file --type symlink --hidden --exclude .git 2> /dev/null'
