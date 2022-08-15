@@ -23,4 +23,4 @@ set --global --export RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
 
 set --global --export DOTNET_CLI_TELEMETRY_OPTOUT 1
 
-fish_add_path ~/.local/bin
+set fish_user_paths ~/.local/bin
