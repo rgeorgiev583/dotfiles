@@ -228,7 +228,7 @@ lvim.plugins = {
   { "nelstrom/vim-visual-star-search" },
   { "kana/vim-textobj-user" },
   { "kana/vim-textobj-function" },
-  { "kana/vim-textobj-entire" },
+  -- { "kana/vim-textobj-entire" },
   {
     "lambdalisue/suda.vim",
     setup = function()
