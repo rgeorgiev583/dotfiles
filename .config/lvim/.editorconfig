@@ -1,5 +1,5 @@
 root = true
 
-[config.lua]
+[*.lua]
 indent_style = space
 indent_size = 2
