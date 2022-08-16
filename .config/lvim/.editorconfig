@@ -1,0 +1,5 @@
+root = true
+
+[config.lua]
+indent_style = space
+indent_size = 2
