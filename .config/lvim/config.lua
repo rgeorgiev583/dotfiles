@@ -273,6 +273,10 @@ lvim.plugins = {
   }
 }
 
+for _, plugin in pairs(lvim.plugins) do
+  plugin.tag = "*"
+end
+
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
 --   pattern = { "*.json", "*.jsonc" },
