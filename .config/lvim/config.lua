@@ -122,6 +122,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default"
+lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -256,7 +257,20 @@ lvim.plugins = {
     end
   },
   { "jessarcher/vim-heritage" },
-  { "editorconfig/editorconfig-vim" }
+  { "editorconfig/editorconfig-vim" },
+  { "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end
+  },
+  {
+    "klen/nvim-config-local",
+    config = function()
+      require("config-local").setup {
+        lookup_parents = true, -- Lookup config files in parent directories
+      }
+    end
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
