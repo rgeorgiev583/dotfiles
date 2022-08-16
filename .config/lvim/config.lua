@@ -112,6 +112,8 @@ lvim.builtin.which_key.vmappings["S"] = { "<cmd>lua require('spectre').open_visu
 -- search in current file
 lvim.builtin.which_key.mappings["F"] = { "<cmd>lua require('spectre').open_file_search()<CR>",
   "Search/replace in current file with Spectre" }
+lvim.builtin.which_key.mappings["D"] = { "<cmd>lua require('dapui').toggle()<CR>",
+  "Toggle nvim-dap-ui" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -269,6 +271,12 @@ lvim.plugins = {
       require("config-local").setup {
         lookup_parents = true, -- Lookup config files in parent directories
       }
+    end
+  },
+  { "rcarriga/nvim-dap-ui",
+    requires = { "mfussenegger/nvim-dap" },
+    config = function()
+      require("dapui").setup()
     end
   }
 }
