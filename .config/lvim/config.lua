@@ -187,6 +187,10 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
 -- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "shfmt", filetypes = { "sh" } },
+}
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
