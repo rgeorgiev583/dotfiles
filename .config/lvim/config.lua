@@ -310,7 +310,13 @@ lvim.plugins = {
         auto_update = true,
       }
     end,
-  }
+  },
+  {
+    "skywind3000/asyncrun.vim",
+    setup = function()
+      vim.g.asyncrun_open = 8
+    end,
+  },
 }
 
 for _, plugin in pairs(lvim.plugins) do
