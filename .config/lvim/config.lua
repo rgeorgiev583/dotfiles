@@ -114,6 +114,8 @@ lvim.builtin.which_key.mappings["F"] = { "<cmd>lua require('spectre').open_file_
   "Search/replace in current file with Spectre" }
 lvim.builtin.which_key.mappings["D"] = { "<cmd>lua require('dapui').toggle()<CR>",
   "Toggle nvim-dap-ui" }
+lvim.builtin.which_key.mappings["o"] = { "<cmd>ClangdSwitchSourceHeader<CR>",
+  "Switch between source and header file" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
