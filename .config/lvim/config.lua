@@ -289,6 +289,20 @@ lvim.plugins = {
     config = function()
       require("telescope").load_extension("yaml_schema")
     end,
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    config = function()
+      require('mason-tool-installer').setup {
+        ensure_installed = {
+          'bash-debug-adapter',
+          'cpptools',
+          'shellcheck',
+          'shfmt',
+        },
+        auto_update = true,
+      }
+    end,
   }
 }
 
