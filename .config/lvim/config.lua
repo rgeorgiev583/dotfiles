@@ -130,6 +130,7 @@ lvim.builtin.dap.active = true
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
+  "cpp",
   "javascript",
   "json",
   "lua",
