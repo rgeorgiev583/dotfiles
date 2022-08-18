@@ -133,15 +133,20 @@ lvim.builtin.terminal.shell = "fish"
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default"
-local navic = require("nvim-navic")
 lvim.builtin.lualine.sections = {
   lualine_a = { 'mode' },
   lualine_b = { 'branch', 'diff', 'diagnostics' },
-  lualine_c = { 'filename', { navic.get_location, cond = navic.is_available } },
+  lualine_c = { 'filename' },
   lualine_x = { 'encoding', 'fileformat', 'filetype' },
   lualine_y = { 'progress' },
   lualine_z = { 'location' }
 }
+lvim.builtin.lualine.on_config_done = function(lualine)
+  local config = lualine.get_config()
+  local navic = require("nvim-navic")
+  table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
+  lualine.setup(config)
+end
 
 lvim.builtin.dap.active = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
