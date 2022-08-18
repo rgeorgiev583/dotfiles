@@ -25,6 +25,8 @@ vim.o.background = "light"
 lvim.leader = "space"
 -- add your own keymapping
 -- Windows-style keybindings
+lvim.keys.normal_mode["<C-Left>"] = "<C-O>"
+lvim.keys.normal_mode["<C-Right>"] = "<Tab>"
 lvim.keys.normal_mode["<Tab>"] = ">>"
 lvim.keys.visual_mode["<Tab>"] = ">gv"
 lvim.keys.normal_mode["<S-Tab>"] = "<<"
