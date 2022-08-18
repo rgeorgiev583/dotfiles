@@ -287,7 +287,7 @@ lvim.plugins = {
     end
   },
   { "jessarcher/vim-heritage" },
-  { "editorconfig/editorconfig-vim" },
+  { "gpanders/editorconfig.nvim" },
   { "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
