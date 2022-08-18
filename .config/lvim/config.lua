@@ -144,6 +144,7 @@ lvim.builtin.lualine.sections = {
 }
 
 lvim.builtin.dap.active = true
+lvim.builtin.gitsigns.opts.current_line_blame = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
