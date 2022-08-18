@@ -116,6 +116,12 @@ lvim.builtin.which_key.mappings["D"] = { "<cmd>lua require('dapui').toggle()<CR>
   "Toggle nvim-dap-ui" }
 lvim.builtin.which_key.mappings["o"] = { "<cmd>ClangdSwitchSourceHeader<CR>",
   "Switch between source and header file" }
+lvim.builtin.which_key.mappings["l"]["o"] = { "<cmd>SymbolsOutline<CR>",
+  "Toggle symbols outline" }
+lvim.builtin.which_key.mappings["t"] = {
+  ["q"] = { "<cmd>TodoQuickFix<CR>", "Show quickfix list with todos" },
+  ["t"] = { "<cmd>TodoTelescope<CR>", "Search through quickfix list with todos" },
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -127,6 +133,16 @@ lvim.builtin.terminal.shell = "fish"
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default"
+local navic = require("nvim-navic")
+lvim.builtin.lualine.sections = {
+  lualine_a = { 'mode' },
+  lualine_b = { 'branch', 'diff', 'diagnostics' },
+  lualine_c = { 'filename', { navic.get_location, cond = navic.is_available } },
+  lualine_x = { 'encoding', 'fileformat', 'filetype' },
+  lualine_y = { 'progress' },
+  lualine_z = { 'location' }
+}
+
 lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -175,6 +191,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+lvim.lsp.on_attach_callback = function(client, bufnr)
+  require("nvim-navic").attach(client, bufnr)
+end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 -- local formatters = require "lvim.lsp.null-ls.formatters"
@@ -317,6 +336,29 @@ lvim.plugins = {
     setup = function()
       vim.g.asyncrun_open = 8
     end,
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require("symbols-outline").setup()
+    end,
+    cmd = "SymbolsOutline",
+  },
+  { "ray-x/lsp_signature.nvim",
+    config = function()
+      require("lsp_signature").setup()
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
   },
 }
 
