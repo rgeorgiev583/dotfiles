@@ -21,6 +21,8 @@ vim.opt.wrap = true
 
 vim.o.background = "light"
 
+vim.cmd('command! Build lua Build()')
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -123,6 +125,11 @@ lvim.builtin.which_key.mappings["l"]["o"] = { "<cmd>SymbolsOutline<CR>",
 lvim.builtin.which_key.mappings["2"] = {
   ["q"] = { "<cmd>TodoQuickFix<CR>", "Show quickfix list with todos" },
   ["t"] = { "<cmd>TodoTelescope<CR>", "Search through quickfix list with todos" },
+}
+lvim.builtin.which_key.mappings["t"] = {
+  ["b"] = { "<cmd>Build<CR>", "Build project" },
+  ["c"] = { "<cmd>AsyncStop<CR>", "Cancel running task" },
+  ["k"] = { "<cmd>AsyncStop!<CR>", "Kill running task" },
 }
 
 -- TODO: User Config for predefined plugins
