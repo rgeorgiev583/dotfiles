@@ -22,6 +22,7 @@ vim.opt.wrap = true
 vim.o.background = "light"
 
 vim.cmd('command! Build lua Build()')
+vim.cmd('command! BuildCustom lua BuildCustom()')
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -129,6 +130,7 @@ lvim.builtin.which_key.mappings["2"] = {
 lvim.builtin.which_key.mappings["r"] = { "<cmd>e!<CR>", "Revert to latest saved version" }
 lvim.builtin.which_key.mappings["t"] = {
   ["b"] = { "<cmd>Build<CR>", "Build project" },
+  ["B"] = { "<cmd>BuildCustom<CR>", "Build project with custom build tools args" },
   ["c"] = { "<cmd>AsyncStop<CR>", "Cancel running task" },
   ["k"] = { "<cmd>AsyncStop!<CR>", "Kill running task" },
 }
