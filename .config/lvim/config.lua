@@ -126,6 +126,7 @@ lvim.builtin.which_key.mappings["2"] = {
   ["q"] = { "<cmd>TodoQuickFix<CR>", "Show quickfix list with todos" },
   ["t"] = { "<cmd>TodoTelescope<CR>", "Search through quickfix list with todos" },
 }
+lvim.builtin.which_key.mappings["r"] = { "<cmd>e!<CR>", "Revert to latest saved version" }
 lvim.builtin.which_key.mappings["t"] = {
   ["b"] = { "<cmd>Build<CR>", "Build project" },
   ["c"] = { "<cmd>AsyncStop<CR>", "Cancel running task" },
