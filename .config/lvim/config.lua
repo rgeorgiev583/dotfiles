@@ -120,7 +120,7 @@ lvim.builtin.which_key.mappings["o"] = { "<cmd>ClangdSwitchSourceHeader<CR>",
   "Switch between source and header file" }
 lvim.builtin.which_key.mappings["l"]["o"] = { "<cmd>SymbolsOutline<CR>",
   "Toggle symbols outline" }
-lvim.builtin.which_key.mappings["t"] = {
+lvim.builtin.which_key.mappings["2"] = {
   ["q"] = { "<cmd>TodoQuickFix<CR>", "Show quickfix list with todos" },
   ["t"] = { "<cmd>TodoTelescope<CR>", "Search through quickfix list with todos" },
 }
