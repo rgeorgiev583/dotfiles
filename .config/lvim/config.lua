@@ -233,6 +233,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "shfmt", filetypes = { "sh" } },
   { command = "prettier", filetypes = { "markdown" } },
+  { command = "cmake-format", filetypes = { "cmake" } },
 }
 
 -- -- set additional linters
@@ -347,6 +348,7 @@ lvim.plugins = {
       require('mason-tool-installer').setup {
         ensure_installed = {
           'bash-debug-adapter',
+          'cmakelang',
           'cpptools',
           'markdownlint',
           'prettier',
