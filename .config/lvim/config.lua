@@ -354,6 +354,7 @@ lvim.plugins = {
           'prettier',
           'shellcheck',
           'shfmt',
+          'sqls'
         },
         auto_update = true,
       }
