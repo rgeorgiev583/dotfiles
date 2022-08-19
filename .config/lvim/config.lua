@@ -231,9 +231,10 @@ end
 -- }
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "shfmt", filetypes = { "sh" } },
-  { command = "prettier", filetypes = { "markdown" } },
+  { command = "autopep8", filetypes = { "python" } },
   { command = "cmake-format", filetypes = { "cmake" } },
+  { command = "prettier", filetypes = { "markdown" } },
+  { command = "shfmt", filetypes = { "sh" } },
 }
 
 -- -- set additional linters
@@ -255,6 +256,7 @@ formatters.setup {
 -- }
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
+  { command = "flake8", filetypes = { "python" } },
   { command = "markdownlint", filetypes = { "markdown" } },
 }
 
@@ -347,9 +349,11 @@ lvim.plugins = {
     config = function()
       require('mason-tool-installer').setup {
         ensure_installed = {
+          'autopep8',
           'bash-debug-adapter',
           'cmakelang',
           'cpptools',
+          'flake8',
           'markdownlint',
           'prettier',
           'shellcheck',
