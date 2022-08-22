@@ -357,6 +357,7 @@ lvim.plugins = {
           "black",
           "cmakelang",
           "cpptools",
+          "debugpy",
           "gitlint",
           "go-debug-adapter",
           "gofumpt",
