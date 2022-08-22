@@ -127,12 +127,6 @@ lvim.builtin.lualine.sections = {
   lualine_y = { "progress" },
   lualine_z = { "location" }
 }
-lvim.builtin.lualine.on_config_done = function(lualine)
-  local config = lualine.get_config()
-  local navic = require("nvim-navic")
-  table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
-  lualine.setup(config)
-end
 lvim.builtin.dap.active = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
@@ -196,9 +190,6 @@ lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = true
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
-lvim.lsp.on_attach_callback = function(client, bufnr)
-  require("nvim-navic").attach(client, bufnr)
-end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 -- local formatters = require "lvim.lsp.null-ls.formatters"
@@ -410,6 +401,17 @@ lvim.plugins = {
   {
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig",
+    config = function()
+      lvim.lsp.on_attach_callback = function(client, bufnr)
+        require("nvim-navic").attach(client, bufnr)
+      end
+      lvim.builtin.lualine.on_config_done = function(lualine)
+        local config = lualine.get_config()
+        local navic = require("nvim-navic")
+        table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
+        lualine.setup(config)
+      end
+    end
   },
 }
 
