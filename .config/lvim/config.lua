@@ -17,6 +17,7 @@ lvim.colorscheme = "vscode"
 
 vim.opt.background = "light"
 vim.opt.shiftwidth = 4
+vim.opt.spell = true
 vim.opt.swapfile = true
 vim.opt.tabstop = 4
 vim.opt.wrap = true
