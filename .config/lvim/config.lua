@@ -21,8 +21,8 @@ vim.opt.swapfile = true
 vim.opt.tabstop = 4
 vim.opt.wrap = true
 
-vim.cmd('command! Build lua Build()')
-vim.cmd('command! BuildCustom lua BuildCustom()')
+vim.cmd("command! Build lua Build()")
+vim.cmd("command! BuildCustom lua BuildCustom()")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -41,12 +41,12 @@ lvim.keys.visual_mode["<C-a>"] = "<Esc>ggVG"
 -- navigate between buffers
 lvim.keys.normal_mode["<leader><Left>"] = "<Cmd>bp<CR>"
 lvim.keys.normal_mode["<leader><Right>"] = "<Cmd>bn<CR>"
--- close the current buffer
+-- exit with saving
+lvim.keys.normal_mode["<leader>x"] = "<Cmd>x<CR>"
+-- close the current buffer without saving
 lvim.keys.normal_mode["<leader>cc"] = "<Cmd>bd!<CR>"
 -- search in selection
 lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
--- exit with saving
-lvim.keys.normal_mode["<leader>x"] = "<Cmd>x<CR>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -120,12 +120,12 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.lualine.style = "default"
 lvim.builtin.lualine.sections = {
-  lualine_a = { 'mode' },
-  lualine_b = { 'branch', 'diff', 'diagnostics' },
-  lualine_c = { 'filename' },
-  lualine_x = { 'encoding', 'fileformat', 'filetype' },
-  lualine_y = { 'progress' },
-  lualine_z = { 'location' }
+  lualine_a = { "mode" },
+  lualine_b = { "branch", "diff", "diagnostics" },
+  lualine_c = { "filename" },
+  lualine_x = { "encoding", "fileformat", "filetype" },
+  lualine_y = { "progress" },
+  lualine_z = { "location" }
 }
 lvim.builtin.lualine.on_config_done = function(lualine)
   local config = lualine.get_config()
@@ -360,23 +360,23 @@ lvim.plugins = {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     config = function()
-      require('mason-tool-installer').setup {
+      require("mason-tool-installer").setup {
         ensure_installed = {
-          'bash-debug-adapter',
-          'black',
-          'cmakelang',
-          'cpptools',
-          'gitlint',
-          'go-debug-adapter',
-          'gofumpt',
-          'markdownlint',
-          'php-debug-adapter',
-          'prettier',
-          'pylint',
-          'shellcheck',
-          'shfmt',
-          'sql-formatter',
-          'sqlfluff',
+          "bash-debug-adapter",
+          "black",
+          "cmakelang",
+          "cpptools",
+          "gitlint",
+          "go-debug-adapter",
+          "gofumpt",
+          "markdownlint",
+          "php-debug-adapter",
+          "prettier",
+          "pylint",
+          "shellcheck",
+          "shfmt",
+          "sql-formatter",
+          "sqlfluff",
         },
         auto_update = true,
       }
