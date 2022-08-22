@@ -39,14 +39,14 @@ lvim.keys.normal_mode["<C-a>"] = "ggVG"
 lvim.keys.insert_mode["<C-a>"] = "<Esc>ggVGi"
 lvim.keys.visual_mode["<C-a>"] = "<Esc>ggVG"
 -- navigate between buffers
-lvim.keys.normal_mode["<leader><Left>"] = ":bp<CR>"
-lvim.keys.normal_mode["<leader><Right>"] = ":bn<CR>"
+lvim.keys.normal_mode["<leader><Left>"] = "<Cmd>bp<CR>"
+lvim.keys.normal_mode["<leader><Right>"] = "<Cmd>bn<CR>"
 -- close the current buffer
-lvim.keys.normal_mode["<leader>cc"] = ":bd!<CR>"
+lvim.keys.normal_mode["<leader>cc"] = "<Cmd>bd!<CR>"
 -- search in selection
 lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
 -- exit with saving
-lvim.keys.normal_mode["<leader>x"] = ":x<CR>"
+lvim.keys.normal_mode["<leader>x"] = "<Cmd>x<CR>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
