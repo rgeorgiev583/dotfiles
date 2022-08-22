@@ -332,11 +332,6 @@ lvim.plugins = {
   },
   { "jessarcher/vim-heritage" },
   { "gpanders/editorconfig.nvim" },
-  { "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end
-  },
   {
     "klen/nvim-config-local",
     config = function()
