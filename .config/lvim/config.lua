@@ -15,12 +15,11 @@ lvim.colorscheme = "vscode"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
-vim.opt.tabstop = 4
+vim.opt.background = "light"
 vim.opt.shiftwidth = 4
-vim.opt.wrap = true
 vim.opt.swapfile = true
-
-vim.o.background = "light"
+vim.opt.tabstop = 4
+vim.opt.wrap = true
 
 vim.cmd('command! Build lua Build()')
 vim.cmd('command! BuildCustom lua BuildCustom()')
