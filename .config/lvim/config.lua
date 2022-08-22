@@ -109,6 +109,8 @@ lvim.builtin.which_key.mappings["2"] = {
   t = { "<Cmd>TodoTelescope<CR>", "Search through quickfix list with TODOs" },
 }
 
+lvim.lsp.buffer_mappings.normal_mode["gt"] = { vim.lsp.buf.type_definition, "Go to type definition" }
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
