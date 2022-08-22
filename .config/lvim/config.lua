@@ -159,7 +159,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 }
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
-lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = true
+-- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = true
 -- lvim.lsp.installer.setup.ui.border = "rounded"
 -- lvim.lsp.installer.setup.ui.keymaps = {
 --     uninstall_server = "d",
@@ -241,7 +241,7 @@ linters.setup {
   { command = "sqlfluff" },
 }
 
-local null_ls = require("lvim.lsp.null-ls")
+local null_ls = require("null-ls")
 local cmake_lint = {
   method = null_ls.methods.DIAGNOSTICS,
   filetypes = { "cmake" },
