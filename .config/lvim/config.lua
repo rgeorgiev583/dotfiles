@@ -133,29 +133,29 @@ lvim.builtin.lualine.on_config_done = function(lualine)
   table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
   lualine.setup(config)
 end
-
 lvim.builtin.dap.active = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "cpp",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
-}
+-- lvim.builtin.treesitter.ensure_installed = {
+--   "bash",
+--   "c",
+--   "cpp",
+--   "javascript",
+--   "json",
+--   "lua",
+--   "python",
+--   "typescript",
+--   "tsx",
+--   "css",
+--   "rust",
+--   "java",
+--   "yaml",
+-- }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.auto_install = true
 
 -- generic LSP settings
 
