@@ -28,25 +28,11 @@ vim.cmd("command! BuildCustom lua BuildCustom()")
 lvim.leader = "space"
 -- add your own keymapping
 -- Windows-style keybindings
-lvim.keys.normal_mode["<C-Left>"] = "<C-O>"
-lvim.keys.normal_mode["<C-Right>"] = "<Tab>"
 lvim.keys.normal_mode["<Tab>"] = ">>"
 lvim.keys.visual_mode["<Tab>"] = ">gv"
 lvim.keys.normal_mode["<S-Tab>"] = "<<"
 lvim.keys.insert_mode["<S-Tab>"] = "<Esc><<i"
 lvim.keys.visual_mode["<S-Tab>"] = "<gv"
-lvim.keys.normal_mode["<C-a>"] = "ggVG"
-lvim.keys.insert_mode["<C-a>"] = "<Esc>ggVGi"
-lvim.keys.visual_mode["<C-a>"] = "<Esc>ggVG"
--- navigate between buffers
-lvim.keys.normal_mode["<leader><Left>"] = "<Cmd>bp<CR>"
-lvim.keys.normal_mode["<leader><Right>"] = "<Cmd>bn<CR>"
--- exit with saving
-lvim.keys.normal_mode["<leader>x"] = "<Cmd>x<CR>"
--- close the current buffer without saving
-lvim.keys.normal_mode["<leader>cc"] = "<Cmd>bd!<CR>"
--- search in selection
-lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -82,32 +68,46 @@ lvim.keys.visual_mode["<A-/>"] = "<Esc>/\\%V"
 --   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
 -- }
+-- select all
+lvim.builtin.which_key.mappings["a"] = { "ggVG", "Select all" }
+lvim.builtin.which_key.vmappings["a"] = { "ggVG", "Select all" }
+-- navigate in jump list
+lvim.builtin.which_key.mappings["<Up>"] = { "<C-O>", "Go to the previous position in the jump list" }
+lvim.builtin.which_key.mappings["<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
+-- navigate between buffers
+lvim.builtin.which_key.mappings["<Left>"] = { "<Cmd>bp<CR>", "Go to the previous buffer" }
+lvim.builtin.which_key.mappings["<Right>"] = { "<Cmd>bn<CR>", "Go to the next buffer" }
+-- save/close/exit
+lvim.builtin.which_key.mappings["r"] = { "<Cmd>e!<CR>", "Revert to latest saved version" }
+lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
+lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 -- search
-lvim.builtin.which_key.mappings["s"]["s"] = { "<cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
-lvim.builtin.which_key.mappings["s"]["w"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+-- search in selection
+lvim.builtin.which_key.vmappings["/"] = "/\\%V"
+lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
+lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>",
   "Search for current word with Spectre" }
-lvim.builtin.which_key.mappings["s"]["F"] = { "<cmd>lua require('spectre').open_file_search()<CR>",
+lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>lua require('spectre').open_file_search()<CR>",
   "Search/replace in current file with Spectre" }
 lvim.builtin.which_key.vmappings["s"] = {
   name = "+Search",
-  s = { "<cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
+  s = { "<Cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
 }
 -- misc
-lvim.builtin.which_key.mappings["d"] = { "<cmd>lua require('dapui').toggle()<CR>", "Toggle debugger UI" }
-lvim.builtin.which_key.mappings["o"] = { "<cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file" }
-lvim.builtin.which_key.mappings["l"]["o"] = { "<cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
-lvim.builtin.which_key.mappings["2"] = {
-  name = "+TODO",
-  q = { "<cmd>TodoQuickFix<CR>", "Show quickfix list with TODOs" },
-  t = { "<cmd>TodoTelescope<CR>", "Search through quickfix list with TODOs" },
-}
-lvim.builtin.which_key.mappings["r"] = { "<cmd>e!<CR>", "Revert to latest saved version" }
+lvim.builtin.which_key.mappings["o"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file" }
+lvim.builtin.which_key.mappings["l"]["o"] = { "<Cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
+lvim.builtin.which_key.mappings["d"] = { "<Cmd>lua require('dapui').toggle()<CR>", "Toggle debugger UI" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Tasks",
-  b = { "<cmd>Build<CR>", "Build project" },
-  B = { "<cmd>BuildCustom<CR>", "Build project with custom build tools args" },
-  c = { "<cmd>AsyncStop<CR>", "Cancel running task" },
-  k = { "<cmd>AsyncStop!<CR>", "Kill running task" },
+  b = { "<Cmd>Build<CR>", "Build project" },
+  B = { "<Cmd>BuildCustom<CR>", "Build project with custom build tools args" },
+  c = { "<Cmd>AsyncStop<CR>", "Cancel running task" },
+  k = { "<Cmd>AsyncStop!<CR>", "Kill running task" },
+}
+lvim.builtin.which_key.mappings["2"] = {
+  name = "+TODO",
+  q = { "<Cmd>TodoQuickFix<CR>", "Show quickfix list with TODOs" },
+  t = { "<Cmd>TodoTelescope<CR>", "Search through quickfix list with TODOs" },
 }
 
 -- TODO: User Config for predefined plugins
