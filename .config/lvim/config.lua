@@ -217,10 +217,12 @@ end
 -- }
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "autopep8", filetypes = { "python" } },
-  { command = "cmake-format", filetypes = { "cmake" } },
+  { command = "black", filetypes = { "python" } },
+  { command = "cmake_format", filetypes = { "cmake" } },
+  { command = "gofumpt", filetypes = { "go" } },
   { command = "prettier", filetypes = { "markdown" } },
   { command = "shfmt", filetypes = { "sh" } },
+  { command = "sql_formatter" },
 }
 
 -- -- set additional linters
@@ -242,9 +244,39 @@ formatters.setup {
 -- }
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "flake8", filetypes = { "python" } },
+  { command = "gitlint" },
   { command = "markdownlint", filetypes = { "markdown" } },
+  { command = "pylint", filetypes = { "python" } },
+  { command = "sqlfluff" },
 }
+
+local null_ls = require("lvim.lsp.null-ls")
+local cmake_lint = {
+  method = null_ls.methods.DIAGNOSTICS,
+  filetypes = { "cmake" },
+  -- null_ls.generator creates an async source
+  -- that spawns the command with the given arguments and options
+  generator = null_ls.generator({
+    command = "cmake-lint",
+    args = { "-" },
+    to_stdin = true,
+    from_stderr = false,
+    -- choose an output format (raw, json, or line)
+    format = "line",
+    check_exit_code = function(code, stderr)
+      local success = code <= 1
+
+      if not success then
+        -- can be noisy for things that run often (e.g. diagnostics), but can
+        -- be useful for things that run on demand (e.g. formatting)
+        print(stderr)
+      end
+
+      return success
+    end,
+  }),
+}
+null_ls.register(cmake_lint)
 
 -- Additional Plugins
 -- lvim.plugins = {
@@ -335,16 +367,21 @@ lvim.plugins = {
     config = function()
       require('mason-tool-installer').setup {
         ensure_installed = {
-          'autopep8',
           'bash-debug-adapter',
+          'black',
           'cmakelang',
           'cpptools',
-          'flake8',
+          'gitlint',
+          'go-debug-adapter',
+          'gofumpt',
           'markdownlint',
+          'php-debug-adapter',
           'prettier',
+          'pylint',
           'shellcheck',
           'shfmt',
-          'sqls'
+          'sql-formatter',
+          'sqlfluff',
         },
         auto_update = true,
       }
