@@ -218,11 +218,11 @@ end
 -- }
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "cmake_format", filetypes = { "cmake" } },
-  { command = "gofumpt", filetypes = { "go" } },
-  { command = "prettier", filetypes = { "markdown" } },
-  { command = "shfmt", filetypes = { "sh" } },
+  { command = "black" },
+  { command = "cmake_format" },
+  { command = "gofumpt" },
+  { command = "prettier" },
+  { command = "shfmt" },
   { command = "sql_formatter" },
 }
 
@@ -246,8 +246,8 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "gitlint" },
-  { command = "markdownlint", filetypes = { "markdown" } },
-  { command = "pylint", filetypes = { "python" } },
+  { command = "markdownlint" },
+  { command = "pylint" },
   { command = "sqlfluff" },
 }
 
