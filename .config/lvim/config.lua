@@ -94,7 +94,6 @@ lvim.builtin.which_key.vmappings["s"] = {
   s = { "<Cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
 }
 -- misc
-lvim.builtin.which_key.mappings["o"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file" }
 lvim.builtin.which_key.mappings["l"]["o"] = { "<Cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
 lvim.builtin.which_key.mappings["d"] = { "<Cmd>lua require('dapui').toggle()<CR>", "Toggle debugger UI" }
 lvim.builtin.which_key.mappings["t"] = {
