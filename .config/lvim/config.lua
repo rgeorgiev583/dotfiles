@@ -70,7 +70,7 @@ lvim.keys.visual_mode["<S-Tab>"] = "<gv"
 -- }
 -- select all
 lvim.builtin.which_key.mappings["a"] = { "ggVG", "Select all" }
-lvim.builtin.which_key.vmappings["a"] = { "ggVG", "Select all" }
+lvim.builtin.which_key.vmappings["a"] = { "<Esc>ggVG", "Select all" }
 -- navigate in jump list
 lvim.builtin.which_key.mappings["<Up>"] = { "<C-O>", "Go to the previous position in the jump list" }
 lvim.builtin.which_key.mappings["<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
@@ -83,7 +83,7 @@ lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
 lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 -- search
 -- search in selection
-lvim.builtin.which_key.vmappings["/"] = "/\\%V"
+lvim.builtin.which_key.vmappings["/"] = "<Esc>/\\%V"
 lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
 lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>",
   "Search for current word with Spectre" }
@@ -91,7 +91,7 @@ lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>lua require('spectre').open_
   "Search/replace in current file with Spectre" }
 lvim.builtin.which_key.vmappings["s"] = {
   name = "+Search",
-  s = { "<Cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
+  s = { "<Esc><Cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
 }
 -- misc
 lvim.builtin.which_key.mappings["l"]["o"] = { "<Cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
