@@ -82,8 +82,7 @@ lvim.builtin.which_key.mappings["r"] = { "<Cmd>e!<CR>", "Revert to latest saved 
 lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
 lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 -- search
--- search in selection
-lvim.builtin.which_key.vmappings["/"] = "<Esc>/\\%V"
+lvim.builtin.which_key.vmappings["/"] = { "<Esc>/\\%V", "Search in selection" }
 lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
 lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>",
   "Search for current word with Spectre" }
