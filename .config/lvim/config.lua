@@ -110,6 +110,7 @@ lvim.builtin.which_key.mappings["2"] = {
 }
 
 lvim.lsp.buffer_mappings.normal_mode["gt"] = { vim.lsp.buf.type_definition, "Go to type definition" }
+lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file (C/C++)" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
