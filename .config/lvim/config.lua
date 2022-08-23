@@ -111,7 +111,8 @@ lvim.lsp.buffer_mappings.normal_mode["g<Up>"] = { "<C-O>", "Go to the previous p
 lvim.lsp.buffer_mappings.normal_mode["g<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
 lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<C-]>", "Go to tag definition" }
 lvim.lsp.buffer_mappings.normal_mode["gT"] = { vim.lsp.buf.type_definition, "Go to type definition" }
-lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file (C/C++)" }
+lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>",
+  "Switch between source and header file (C/C++)" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
