@@ -107,8 +107,8 @@ lvim.builtin.which_key.mappings["2"] = {
 }
 
 -- navigation
-lvim.lsp.buffer_mappings.normal_mode["g<Up>"] = { "<C-O>", "Go to previous position in jump list" }
-lvim.lsp.buffer_mappings.normal_mode["g<Down>"] = { "<Tab>", "Go to next position in jump list" }
+lvim.lsp.buffer_mappings.normal_mode["g<Left>"] = { "<C-O>", "Go to previous position in jump list" }
+lvim.lsp.buffer_mappings.normal_mode["g<Right>"] = { "<Tab>", "Go to next position in jump list" }
 lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<C-]>", "Go to tag definition" }
 lvim.lsp.buffer_mappings.normal_mode["gT"] = { vim.lsp.buf.type_definition, "Go to type definition" }
 lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>",
