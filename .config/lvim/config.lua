@@ -81,14 +81,18 @@ lvim.builtin.which_key.mappings["r"] = { "<Cmd>e!<CR>", "Revert to latest saved 
 lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
 lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 -- search
-lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
-lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>",
-  "Search for current word with Spectre" }
-lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>lua require('spectre').open_file_search()<CR>",
+lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open_file_search()<CR>",
   "Search/replace in current file with Spectre" }
+lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word = true, path = vim.fn.fnameescape(vim.fn.expand(\"%:p:.\"))})<CR>",
+  "Search for current word in current file with Spectre" }
+lvim.builtin.which_key.mappings["s"]["S"] = { "<Cmd>lua require('spectre').open()<CR>", "Search/replace with Spectre" }
+lvim.builtin.which_key.mappings["s"]["W"] = { "<Cmd>lua require('spectre').open_visual({select_word = true})<CR>",
+  "Search for current word with Spectre" }
 lvim.builtin.which_key.vmappings["s"] = {
   name = "+Search",
-  s = { "<Esc><Cmd>lua require('spectre').open_visual()<CR>", "Search for current selection with Spectre" }
+  s = { "<Esc><Cmd>lua require('spectre').open_visual({path = vim.fn.fnameescape(vim.fn.expand(\"%:p:.\"))})<CR>",
+    "Search/replace in current file with Spectre" },
+  S = { "<Esc><Cmd>lua require('spectre').open_visual()<CR>", "Search/replace with Spectre" },
 }
 -- misc
 lvim.builtin.which_key.mappings["l"]["o"] = { "<Cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
