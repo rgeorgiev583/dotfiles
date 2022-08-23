@@ -340,6 +340,8 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("spectre").setup({
+        live_update = true,
+        is_insert_mode = true,
         mapping = {
           -- toggle_line = {
           --   map = "dd",
