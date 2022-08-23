@@ -133,10 +133,12 @@ lvim.builtin.lualine.sections = {
   lualine_z = { "location" }
 }
 lvim.builtin.lualine.on_config_done = function(lualine)
-  local config = lualine.get_config()
-  local navic = require("nvim-navic")
-  table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
-  lualine.setup(config)
+  local ok, navic = pcall(require, "nvim-navic")
+  if ok then
+    local config = lualine.get_config()
+    table.insert(config.sections.lualine_c, { navic.get_location, cond = navic.is_available })
+    lualine.setup(config)
+  end
 end
 lvim.builtin.dap.active = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
@@ -202,7 +204,10 @@ lvim.lsp.installer.setup.ensure_installed = {
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 lvim.lsp.on_attach_callback = function(client, bufnr)
-  require("nvim-navic").attach(client, bufnr)
+  local ok, navic = pcall(require, "nvim-navic")
+  if ok then
+    navic.attach(client, bufnr)
+  end
 end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
