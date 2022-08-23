@@ -494,6 +494,7 @@ lvim.plugins = {
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig",
   },
+  { "wellle/targets.vim" },
 }
 
 for _, plugin in pairs(lvim.plugins) do
