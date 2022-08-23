@@ -96,8 +96,8 @@ lvim.builtin.which_key.mappings["d"] = { "<Cmd>lua require('dapui').toggle()<CR>
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Tasks",
   b = { "<Cmd>Build<CR>", "Build project" },
-  B = { "<Cmd>BuildCustom<CR>", "Build project with custom build tools args" },
-  c = { "<Cmd>AsyncStop<CR>", "Cancel running task" },
+  B = { "<Cmd>BuildCustom<CR>", "Build project with custom args" },
+  c = { "<Cmd>AsyncStop<CR>", "Terminate running task" },
   k = { "<Cmd>AsyncStop!<CR>", "Kill running task" },
 }
 lvim.builtin.which_key.mappings["2"] = {
@@ -107,8 +107,8 @@ lvim.builtin.which_key.mappings["2"] = {
 }
 
 -- navigation
-lvim.lsp.buffer_mappings.normal_mode["g<Up>"] = { "<C-O>", "Go to the previous position in the jump list" }
-lvim.lsp.buffer_mappings.normal_mode["g<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
+lvim.lsp.buffer_mappings.normal_mode["g<Up>"] = { "<C-O>", "Go to previous position in jump list" }
+lvim.lsp.buffer_mappings.normal_mode["g<Down>"] = { "<Tab>", "Go to next position in jump list" }
 lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<C-]>", "Go to tag definition" }
 lvim.lsp.buffer_mappings.normal_mode["gT"] = { vim.lsp.buf.type_definition, "Go to type definition" }
 lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>",
@@ -275,13 +275,11 @@ local cmake_lint = {
     format = "line",
     check_exit_code = function(code, stderr)
       local success = code <= 1
-
       if not success then
         -- can be noisy for things that run often (e.g. diagnostics), but can
         -- be useful for things that run on demand (e.g. formatting)
         print(stderr)
       end
-
       return success
     end,
   }),
