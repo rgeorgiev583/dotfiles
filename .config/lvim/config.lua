@@ -461,7 +461,7 @@ lvim.plugins = {
           "sql-formatter",
           "sqlfluff",
         },
-        auto_update = true,
+        -- auto_update = true,
       }
     end,
   },
