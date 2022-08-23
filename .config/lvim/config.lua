@@ -73,9 +73,6 @@ lvim.keys.visual_mode["/"] = "<Esc>/\\%V"
 -- select all
 lvim.builtin.which_key.mappings["a"] = { "ggVG", "Select all" }
 lvim.builtin.which_key.vmappings["a"] = { "<Esc>ggVG", "Select all" }
--- navigate in jump list
-lvim.builtin.which_key.mappings["<Up>"] = { "<C-O>", "Go to the previous position in the jump list" }
-lvim.builtin.which_key.mappings["<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
 -- navigate between buffers
 lvim.builtin.which_key.mappings["<Left>"] = { "<Cmd>bp<CR>", "Go to the previous buffer" }
 lvim.builtin.which_key.mappings["<Right>"] = { "<Cmd>bn<CR>", "Go to the next buffer" }
@@ -109,7 +106,11 @@ lvim.builtin.which_key.mappings["2"] = {
   t = { "<Cmd>TodoTelescope<CR>", "Search through quickfix list with TODOs" },
 }
 
-lvim.lsp.buffer_mappings.normal_mode["gt"] = { vim.lsp.buf.type_definition, "Go to type definition" }
+-- navigation
+lvim.lsp.buffer_mappings.normal_mode["g<Up>"] = { "<C-O>", "Go to the previous position in the jump list" }
+lvim.lsp.buffer_mappings.normal_mode["g<Down>"] = { "<Tab>", "Go to the next position in the jump list" }
+lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<C-]>", "Go to tag definition" }
+lvim.lsp.buffer_mappings.normal_mode["gT"] = { vim.lsp.buf.type_definition, "Go to type definition" }
 lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", "Switch between source and header file (C/C++)" }
 
 -- TODO: User Config for predefined plugins
