@@ -22,8 +22,6 @@ vim.opt.swapfile = true
 vim.opt.tabstop = 4
 vim.opt.wrap = true
 
-vim.cmd("command! FindFiles Telescope find_files hidden=true follow=true")
-vim.cmd("command! FindInAllFiles Telescope find_files hidden=true no_ignore=true follow=true")
 vim.cmd("command! Build lua Build()")
 vim.cmd("command! BuildCustom lua BuildCustom()")
 
@@ -65,6 +63,7 @@ lvim.keys.normal_mode["gt"] = "<C-]>"
 --     ["<C-k>"] = actions.move_selection_previous,
 --   },
 -- }
+lvim.builtin.telescope.pickers.find_files.follow = true
 lvim.builtin.telescope.defaults.layout_config.width = 0.95;
 lvim.builtin.telescope.defaults.layout_config.height = 0.95;
 
@@ -92,8 +91,8 @@ lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buff
 lvim.builtin.which_key.mappings["n"] = { "<Cmd>:ene!<CR>", "New file" }
 -- search
 lvim.builtin.which_key.mappings["<leader>"] = { "<Cmd>Telescope frecency workspace=CWD<CR>", "Jump to file" }
-lvim.builtin.which_key.mappings["s"]["f"] = { "<Cmd>FindFiles<CR>", "Find File" }
-lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>FindInAllFiles<CR>", "Find in All Files" }
+lvim.builtin.which_key.mappings["s"]["f"] = { "<Cmd>Telescope find_files<CR>", "Find File" }
+lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>Telescope find_files no_ignore=true<CR>", "Find in All Files" }
 lvim.builtin.which_key.mappings["s"]["P"] = { "<Cmd>Telescope projects<CR>", "Recent projects" }
 lvim.builtin.which_key.mappings["s"]["o"] = { "<Cmd>Telescope heading treesitter=true<CR>", "Headings" }
 lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open_file_search()<CR>",
@@ -135,7 +134,6 @@ lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.alpha.dashboard.section.buttons.entries[1] = { "SPC f", "  Find File", "<Cmd>FindFiles<CR>" }
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "fish"
