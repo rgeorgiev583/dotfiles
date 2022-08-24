@@ -60,6 +60,8 @@ lvim.keys.visual_mode["/"] = "<Esc>/\\%V"
 --     ["<C-k>"] = actions.move_selection_previous,
 --   },
 -- }
+lvim.builtin.telescope.defaults.layout_config.width = 0.95;
+lvim.builtin.telescope.defaults.layout_config.height = 0.95;
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
