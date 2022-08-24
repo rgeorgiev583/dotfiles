@@ -36,7 +36,12 @@ lvim.keys.visual_mode["<Tab>"] = ">gv"
 lvim.keys.normal_mode["<S-Tab>"] = "<<"
 lvim.keys.insert_mode["<S-Tab>"] = "<Esc><<i"
 lvim.keys.visual_mode["<S-Tab>"] = "<gv"
+-- search in selection
 lvim.keys.visual_mode["/"] = "<Esc>/\\%V"
+-- navigation
+lvim.keys.normal_mode["g<Left>"] = "<C-O>"
+lvim.keys.normal_mode["g<Right>"] = "<Tab>"
+lvim.keys.normal_mode["gt"] = "<C-]>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -121,10 +126,7 @@ lvim.builtin.which_key.mappings["2"] = {
   t = { "<Cmd>TodoTelescope<CR>", "Search through quickfix list with TODOs" },
 }
 
--- navigation
-lvim.lsp.buffer_mappings.normal_mode["g<Left>"] = { "<C-O>", "Go to previous position in jump list" }
-lvim.lsp.buffer_mappings.normal_mode["g<Right>"] = { "<Tab>", "Go to next position in jump list" }
-lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<C-]>", "Go to tag definition" }
+-- navigation in LSP buffers
 lvim.lsp.buffer_mappings.normal_mode["gT"] = { vim.lsp.buf.type_definition, "Go to type definition" }
 lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR>",
   "Switch between source and header file (C/C++)" }
