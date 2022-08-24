@@ -84,9 +84,11 @@ lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
 lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 lvim.builtin.which_key.mappings["n"] = { "<Cmd>:ene!<CR>", "New file" }
 -- search
+lvim.builtin.which_key.mappings["<leader>"] = { "<Cmd>Telescope frecency workspace=CWD<CR>", "Jump to file" }
 lvim.builtin.which_key.mappings["s"]["f"] = { "<Cmd>FindFiles<CR>", "Find File" }
 lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>FindInAllFiles<CR>", "Find in All Files" }
 lvim.builtin.which_key.mappings["s"]["P"] = { "<Cmd>Telescope projects<CR>", "Recent projects" }
+lvim.builtin.which_key.mappings["s"]["o"] = { "<Cmd>Telescope heading treesitter=true<CR>", "Headings" }
 lvim.builtin.which_key.mappings["s"]["s"] = { "<Cmd>lua require('spectre').open_file_search()<CR>",
   "Search/replace in current file with Spectre" }
 lvim.builtin.which_key.mappings["s"]["w"] = { "<Cmd>lua require('spectre').open_visual({select_word = true, path = vim.fn.fnameescape(vim.fn.expand(\"%:p:.\"))})<CR>",
@@ -503,6 +505,18 @@ lvim.plugins = {
     requires = "neovim/nvim-lspconfig",
   },
   { "wellle/targets.vim" },
+  {
+    "nvim-telescope/telescope-frecency.nvim",
+    config = function()
+      require("telescope").load_extension("frecency")
+    end,
+    requires = { "tami5/sqlite.lua" },
+  },
+  { "crispgm/telescope-heading.nvim",
+    config = function()
+      require("telescope").load_extension("heading")
+    end,
+  },
 }
 
 for _, plugin in pairs(lvim.plugins) do
