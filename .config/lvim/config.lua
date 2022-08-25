@@ -66,6 +66,8 @@ lvim.keys.normal_mode["gt"] = "<C-]>"
 lvim.builtin.telescope.pickers.find_files.follow = true
 lvim.builtin.telescope.defaults.layout_config.width = 0.95;
 lvim.builtin.telescope.defaults.layout_config.height = 0.95;
+local _, actions = pcall(require, "telescope.actions")
+lvim.builtin.telescope.defaults.mappings["i"]["<Esc>"] = actions.close
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
