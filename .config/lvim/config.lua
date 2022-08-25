@@ -248,7 +248,7 @@ formatters.setup {
   { command = "black" },
   -- { command = "cmake_format" },
   { command = "gofumpt" },
-  { command = "prettier" },
+  { command = "prettier", filetypes = { "markdown" } },
   { command = "shfmt" },
   { command = "sql_formatter" },
 }
