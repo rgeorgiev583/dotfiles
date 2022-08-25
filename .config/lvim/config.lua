@@ -244,7 +244,7 @@ end
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black" },
-  { command = "cmake_format" },
+  -- { command = "cmake_format" },
   { command = "gofumpt" },
   { command = "prettier" },
   { command = "shfmt" },
