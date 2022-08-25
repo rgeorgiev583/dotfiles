@@ -1,0 +1,2 @@
+set wrap-lines = yes
+bind main B !?git rebase -i %(commit)
