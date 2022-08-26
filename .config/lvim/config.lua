@@ -113,7 +113,7 @@ lvim.builtin.which_key.vmappings["s"] = {
 -- misc
 lvim.builtin.which_key.mappings["l"]["o"] = { "<Cmd>SymbolsOutline<CR>", "Toggle symbols outline" }
 lvim.builtin.which_key.mappings["l"]["y"] = { "<Cmd>Telescope yaml_schema<CR>", "Select YAML schema" }
-lvim.builtin.which_key.mappings["d"] = { "<Cmd>lua require('dapui').toggle()<CR>", "Toggle debugger UI" }
+lvim.builtin.which_key.mappings["D"] = { "<Cmd>lua require('dapui').toggle()<CR>", "Toggle debugger UI" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Tasks",
   b = { "<Cmd>Build<CR>", "Build project" },
