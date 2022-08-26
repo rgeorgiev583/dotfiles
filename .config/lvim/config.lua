@@ -469,7 +469,7 @@ lvim.plugins = {
           "markdownlint",
           "php-debug-adapter",
           "prettier",
-          "pylint",
+          { "pylint", version = "v2.14.3" },
           "shellcheck",
           "shfmt",
           "sql-formatter",
