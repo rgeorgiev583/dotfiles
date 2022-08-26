@@ -521,6 +521,12 @@ lvim.plugins = {
       require("telescope").load_extension("heading")
     end,
   },
+  {
+    "mfussenegger/nvim-dap-python",
+    config = function()
+      require('dap-python').setup(os.getenv("HOME") .. "/.local/share/nvim/mason/bin/debugpy")
+    end,
+  },
 }
 
 for _, plugin in pairs(lvim.plugins) do
