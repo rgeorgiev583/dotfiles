@@ -1,0 +1,11 @@
+theme = "onelight"
+
+[editor]
+auto-format = false
+idle-timeout = 0
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.insert]
+j = { k = "normal_mode" }
