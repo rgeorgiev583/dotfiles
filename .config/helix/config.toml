@@ -1,4 +1,4 @@
-theme = "onelight"
+theme = "emacs"
 
 [editor]
 auto-format = false
