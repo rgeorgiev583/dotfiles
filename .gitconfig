@@ -24,7 +24,7 @@
 	cmd = lvim -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
 	trustExitCode = true
 [mergetool "vscode"]
-	cmd = code --wait $MERGED
+	cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 [submodule]
 	fetchJobs = 0
 [pull]
