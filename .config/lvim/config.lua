@@ -40,6 +40,8 @@ lvim.keys.visual_mode["/"] = "<Esc>/\\%V"
 lvim.keys.normal_mode["g<Left>"] = "<C-O>"
 lvim.keys.normal_mode["g<Right>"] = "<Tab>"
 lvim.keys.normal_mode["gt"] = "<C-]>"
+-- paste without yank
+lvim.keys.visual_mode["p"] = "<Plug>ReplaceWithRegisterVisual"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
