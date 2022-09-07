@@ -41,6 +41,8 @@ lvim.keys.normal_mode["g<Left>"] = "<C-O>"
 lvim.keys.normal_mode["g<Right>"] = "<Tab>"
 lvim.keys.normal_mode["gt"] = "<C-]>"
 -- paste without yank
+lvim.keys.normal_mode["gp"] = "<Plug>ReplaceWithRegisterOperator"
+lvim.keys.normal_mode["gpp"] = "<Plug>ReplaceWithRegisterLine"
 lvim.keys.visual_mode["p"] = "<Plug>ReplaceWithRegisterVisual"
 
 -- unmap a default keymapping
