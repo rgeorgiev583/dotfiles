@@ -17,6 +17,8 @@
 	cmd = lvim -d $LOCAL $REMOTE
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
 [merge]
 	conflictstyle = diff3
 	tool = lvim_mergetool
