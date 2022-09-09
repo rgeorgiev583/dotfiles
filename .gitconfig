@@ -13,6 +13,8 @@
 [diff "sqlite3"]
 	binary = true
 	textconv = "echo .dump | sqlite3"
+[difftool]
+	prompt = false
 [difftool "lvimdiff"]
 	cmd = lvim -d $LOCAL $REMOTE
 [difftool "vscode"]
@@ -45,3 +47,5 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+[pager]
+	difftool = true
