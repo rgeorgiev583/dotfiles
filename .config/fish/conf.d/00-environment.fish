@@ -1,6 +1,9 @@
-# set Helix as the default editor
-set --global --export EDITOR helix
-set --global --export VISUAL helix
+# set LunarVim as the default editor
+set --global --export EDITOR lvim
+set --global --export VISUAL lvim
+
+# set LunarVim as the default diff tool
+set --global --export DIFFPROG 'lvim -d'
 
 # colorize man pages
 set --global --export MANPAGER 'less -R --use-color -Dd+g -Du+c'
