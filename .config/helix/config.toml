@@ -3,6 +3,7 @@ theme = "emacs"
 [editor]
 auto-format = false
 idle-timeout = 0
+true-color = true
 
 [editor.cursor-shape]
 insert = "bar"
