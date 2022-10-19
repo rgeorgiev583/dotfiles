@@ -2,7 +2,7 @@
 
 for entry in .*; do
     case $entry in
-    . | .. | .git | .gitignore)
+    . | .. | .git | .gitignore | .gitkeep | .editorconfig)
         continue
         ;;
     *)
