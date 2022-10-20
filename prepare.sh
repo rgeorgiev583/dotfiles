@@ -1,8 +1,29 @@
 #!/bin/bash
 
-if ! grep -Eq '(ID|ID_LIKE)=arch' /etc/os-release; then
-	echo 'error: OS not supported' >&2
-	exit 1
-fi
+source /etc/os-release
 
-yay --sync --needed neovim fzf git-delta fd ripgrep fisher nerd-fonts-hack
+function install_packages {
+    case $1 in
+    arch)
+        pacman --sync --needed --noconfirm bat fd fish fisher fzf git-delta neovim psmisc python-pip ripgrep sqlite tree
+        exit
+        ;;
+    debian)
+        # `fisher` and `git-delta` are not in the official repos
+        apt-get -y update && apt-get -y install bat fd-find fish fzf neovim psmisc python3-pip ripgrep sqlite3 tree &&
+            ln -s /usr/bin/batcat /usr/local/bin/bat &&
+            ln -s /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
+            ln -s /usr/bin/vim.tiny /usr/local/bin/vim
+        exit
+        ;;
+    esac
+}
+
+install_packages "$ID"
+
+for distro in $ID_LIKE; do
+    install_packages "$distro"
+done
+
+echo 'error: OS not supported' >&2
+exit 1
