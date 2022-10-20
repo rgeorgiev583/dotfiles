@@ -11,8 +11,11 @@ Some configuration files I've tweaked to my own use and benefit which I thought 
 
 # Installation
 
-Use the provided install script as follows, where `MACRO_DEF` is a macro definition with the syntax `${FILE_PATH}/${MACRO_NAME}=${MACRO_VALUE}`:
+Use the install script in the repo, providing macro definitions (if needed) on stdin. Each definition goes on a separate line with the following syntax:
 
-    ./install.sh MACRO_DEF...
+    $ ./install.sh
+    ${FILE_PATH1} ${MACRO_NAME1}=${MACRO_VALUE1}
+    ${FILE_PATH2} ${MACRO_NAME2}=${MACRO_VALUE2}
+    ...
 
 This script uses `m4` to substitute each `${MACRO_NAME}` inside the specified `${FILE_PATH}` with the specified `${MACRO_VALUE}`.

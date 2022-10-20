@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rsync -a --exclude-from=ignore.lst .[^.]* ~
+rsync -a --exclude-from=ignore.lst .[^.]* ~ "$@"
 
-for macro_definition; do
-    m4 -D "${macro_definition##*/}" "${macro_definition%/*}" > "$HOME/${macro_definition%/*}"
+while read -r file_path macro_definition; do
+    m4 -D "$macro_definition" "$file_path" > "$HOME/$file_path"
 done
