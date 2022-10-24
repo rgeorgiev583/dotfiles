@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rsync -a --exclude-from=ignore.lst .[^.]* ~ "$@"
+rsync -a homedir/ ~/ "$@"
 
 while read -r file_path macro_definition; do
-    m4 -D "$macro_definition" "$file_path" > "$HOME/$file_path"
+    m4 -D "$macro_definition" "homedir/$file_path" > "$HOME/$file_path"
 done
