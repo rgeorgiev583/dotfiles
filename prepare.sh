@@ -15,6 +15,11 @@ function install_packages {
             ln -s /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
             ln -s /usr/bin/vim.tiny /usr/local/bin/vim
         exit
+    ;;
+    fedora)
+        # `fisher` is not in the official repos
+        yum -y install bat fd-find fish fzf git-delta neovim psmisc python-pip ripgrep rsync sqlite tree
+        exit
         ;;
     esac
 }
