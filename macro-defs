@@ -1,0 +1,2 @@
+.gitconfig EMAIL=rgeorgiev583@gmail.com
+.config/fish/conf.d/00-environment.fish EXTRA_USER_PATHS=

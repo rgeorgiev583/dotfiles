@@ -23,3 +23,5 @@ Use the install script in the repo, providing macro definitions (if needed) on s
     ...
 
 This script uses `m4` to substitute each `${MACRO_NAME}` inside the specified `${FILE_PATH}` with the specified `${MACRO_VALUE}`.
+
+The currently used macro definitions are listed in the `macro-defs` file, along with example values for them.
