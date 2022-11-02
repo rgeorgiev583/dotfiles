@@ -96,8 +96,7 @@ lvim.builtin.which_key.mappings["x"] = { "<Cmd>x<CR>", "Save and exit" }
 lvim.builtin.which_key.mappings["C"] = { "<Cmd>bd!<CR>", "Close the current buffer without saving" }
 lvim.builtin.which_key.mappings["n"] = { "<Cmd>:ene!<CR>", "New file" }
 -- search
-lvim.builtin.which_key.mappings["<leader>"] = { "<Cmd>Telescope frecency workspace=CWD<CR>", "Jump to file" }
-lvim.builtin.which_key.mappings["s"]["f"] = { "<Cmd>Telescope find_files<CR>", "Find File" }
+lvim.builtin.which_key.mappings["<leader>"] = lvim.builtin.which_key.mappings["s"]["f"]
 lvim.builtin.which_key.mappings["s"]["F"] = { "<Cmd>Telescope find_files no_ignore=true<CR>", "Find in All Files" }
 lvim.builtin.which_key.mappings["s"]["P"] = { "<Cmd>Telescope projects<CR>", "Recent projects" }
 lvim.builtin.which_key.mappings["s"]["o"] = { "<Cmd>Telescope heading treesitter=true<CR>", "Headings" }
@@ -512,13 +511,6 @@ lvim.plugins = {
     requires = "neovim/nvim-lspconfig",
   },
   { "wellle/targets.vim" },
-  {
-    "nvim-telescope/telescope-frecency.nvim",
-    config = function()
-      require("telescope").load_extension("frecency")
-    end,
-    requires = { "tami5/sqlite.lua" },
-  },
   { "crispgm/telescope-heading.nvim",
     config = function()
       require("telescope").load_extension("heading")
