@@ -73,6 +73,10 @@ lvim.builtin.telescope.defaults.layout_config.height = 0.95;
 local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings["i"]["<Esc>"] = actions.close
 
+-- Change theme settings
+-- lvim.builtin.theme.options.dim_inactive = true
+-- lvim.builtin.theme.options.style = "storm"
+
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
