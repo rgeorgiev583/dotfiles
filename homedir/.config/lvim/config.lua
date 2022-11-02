@@ -140,7 +140,6 @@ lvim.lsp.buffer_mappings.normal_mode["go"] = { "<Cmd>ClangdSwitchSourceHeader<CR
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shell = "fish"
 lvim.builtin.nvimtree.setup.view.side = "left"
