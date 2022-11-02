@@ -11,7 +11,7 @@ The files are located in `homedir`, the contents of which are supposed to be cop
 - [Neovim](https://neovim.io/)
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
-Use the `prepare.sh` script to install them.
+Use the `install-packages.sh` script to install them.
 
 # Installation
 
