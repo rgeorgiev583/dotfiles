@@ -335,7 +335,7 @@ lvim.plugins = {
   {
     "lambdalisue/suda.vim",
     setup = function()
-      -- vim.g.suda_smart_edit = 1
+      vim.g.suda_smart_edit = 1
     end
   },
   { "samoshkin/vim-mergetool" },
