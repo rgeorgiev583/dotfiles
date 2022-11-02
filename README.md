@@ -15,9 +15,9 @@ Use the `install-packages.sh` script to install them.
 
 # Installation
 
-Use the install script in the repo, providing macro definitions (if needed) on stdin. Each definition goes on a separate line with the following syntax:
+Use the `install-dotfiles.sh` script in the repo, providing macro definitions (if needed) on stdin. Each definition goes on a separate line with the following syntax:
 
-    $ ./install.sh
+    $ ./install-dotfiles.sh
     ${FILE_PATH1} ${MACRO_NAME1}=${MACRO_VALUE1}
     ${FILE_PATH2} ${MACRO_NAME2}=${MACRO_VALUE2}
     ...
