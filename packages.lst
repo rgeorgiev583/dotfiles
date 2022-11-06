@@ -1,3 +1,3 @@
-arch=(bat fd fish fisher fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
-debian=(bat fd-find fish fzf m4 neovim psmisc python3-pip ripgrep rsync sqlite3 tig tree) 
-fedora=(bat fd-find fish fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
+arch=(bat fd fish fisher fzf gcc git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
+debian=(bat fd-find fish fzf g++ m4 neovim psmisc python3-pip ripgrep rsync sqlite3 tig tree) 
+fedora=(bat fd-find fish fzf gcc-c++ git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
