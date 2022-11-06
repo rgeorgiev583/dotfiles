@@ -191,9 +191,9 @@ lvim.builtin.treesitter.auto_install = true
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
-lvim.lsp.installer.setup.ensure_installed = {
-  "sqls",
-}
+-- lvim.lsp.installer.setup.ensure_installed = {
+--   "sqls",
+-- }
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
 -- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = true
