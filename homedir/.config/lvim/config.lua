@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "vscode"
+lvim.colorscheme = "tokyonight-day"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -319,7 +319,6 @@ null_ls.register(cmake_lint)
 --     },
 -- }
 lvim.plugins = {
-  { "Mofiqul/vscode.nvim" },
   {
     "tpope/vim-surround",
     keys = { "c", "d", "y" }
