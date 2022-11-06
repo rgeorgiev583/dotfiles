@@ -5,9 +5,6 @@ set --global --export VISUAL lvim
 # set LunarVim as the default diff tool
 set --global --export DIFFPROG 'lvim -d'
 
-# colorize man pages
-set --global --export MANPAGER 'less -R --use-color -Dd+g -Du+c'
-
 # run `make` with as many jobs in parallel as there as processors
 set --global --export MAKEFLAGS -j(nproc)
 
