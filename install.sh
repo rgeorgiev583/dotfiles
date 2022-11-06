@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./install-packages.sh
+./install-packages.sh ./base-packages.lst ./packages.lst
 ./install-nerd-font-hack.sh
 ./install-lvim.sh
 ./install-fisher.fish

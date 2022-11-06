@@ -2,13 +2,9 @@
 
 source /etc/os-release
 
-if [[ $# -eq 0 ]]; then
-    source ./packages.lst
-else
-    for package_list_filename; do
-        source $package_list_filename
-    done
-fi
+for package_list_filename; do
+    source $package_list_filename
+done
 
 function install_packages {
     case $1 in

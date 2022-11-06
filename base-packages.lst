@@ -1,0 +1,3 @@
+arch=(bat fd fish psmisc python-pip ripgrep rsync sqlite tree)
+debian=(bat fd-find fish psmisc python3-pip ripgrep rsync sqlite3 tree) 
+fedora=(bat fd-find fish psmisc python-pip ripgrep rsync sqlite tree)
