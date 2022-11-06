@@ -2,23 +2,31 @@
 
 source /etc/os-release
 
+if [[ $# -eq 0 ]]; then
+    source ./packages.lst
+else
+    for package_list_filename; do
+        source $package_list_filename
+    done
+fi
+
 function install_packages {
     case $1 in
     arch)
-        pacman --sync --needed --noconfirm bat fd fish fisher fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree
+        pacman --sync --needed --noconfirm ${arch[@]}
         exit
         ;;
     debian)
         # `fisher` and `git-delta` are not in the official repos
-        apt-get -y update && apt-get -y install bat fd-find fish fzf m4 neovim psmisc python3-pip ripgrep rsync sqlite3 tig tree &&
-            ln -s /usr/bin/batcat /usr/local/bin/bat &&
-            ln -s /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
-            ln -s /usr/bin/vim.tiny /usr/local/bin/vim
+        apt-get -y update && apt-get -y install ${debian[@]} &&
+            ln -sf /usr/bin/batcat /usr/local/bin/bat &&
+            ln -sf /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
+            ln -sf /usr/bin/vim.tiny /usr/local/bin/vim
         exit
     ;;
     fedora)
         # `fisher` is not in the official repos
-        yum -y install bat fd-find fish fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree
+        yum -y install ${fedora[@]}
         exit
         ;;
     esac
