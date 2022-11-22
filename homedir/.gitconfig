@@ -49,3 +49,5 @@
 	autoSetupRemote = true
 [pager]
 	difftool = true
+[commit]
+    verbose = true
