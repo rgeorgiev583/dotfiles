@@ -1,3 +1,3 @@
-arch=(bat fd fish fzf psmisc python-pip ripgrep tree)
-debian=(bat fd-find fish fzf psmisc python3-pip ripgrep tree) 
-fedora=(bat fd-find fish fzf psmisc python-pip ripgrep tree)
+arch+=(bat fd fish fzf psmisc python-pip ripgrep tree)
+debian+=(bat fd-find fish fzf psmisc python3-pip ripgrep tree) 
+fedora+=(bat fd-find fish fzf psmisc python-pip ripgrep tree)
