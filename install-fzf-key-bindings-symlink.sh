@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 source /etc/os-release
 
 function install_symlink {
