@@ -6,7 +6,7 @@ source /etc/os-release
 
 function install_symlink {
     case $1 in
-    arch|debian)
+    arch|debian|suse)
         ln -sf /usr/share/fish/vendor_functions.d/fzf_key_bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
         exit
         ;;

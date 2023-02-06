@@ -1,3 +1,4 @@
 arch+=(fisher git-delta m4 neovim rsync sqlite tig)
 debian+=(m4 neovim rsync sqlite3 tig) 
 fedora+=(git-delta m4 neovim rsync sqlite tig)
+suse+=(git-delta m4 neovim rsync sqlite tig)

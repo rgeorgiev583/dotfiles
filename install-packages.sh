@@ -25,6 +25,11 @@ function install_packages {
         yum -y install ${fedora[@]}
         exit
         ;;
+    suse)
+        # `fisher` is not in the official repos
+        zypper -n install ${suse[@]}
+        exit
+        ;;
     esac
 }
 
