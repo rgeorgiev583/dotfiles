@@ -13,7 +13,7 @@ function install_packages {
         exit
         ;;
     debian)
-        # `fisher` and `git-delta` are not in the official repos
+        # `git-delta` is not in the official repos
         apt-get -y update && apt-get -y install ${debian[@]} &&
             ln -sf /usr/bin/batcat /usr/local/bin/bat &&
             ln -sf /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
@@ -21,12 +21,10 @@ function install_packages {
         exit
     ;;
     fedora)
-        # `fisher` is not in the official repos
         yum -y install ${fedora[@]}
         exit
         ;;
     suse)
-        # `fisher` is not in the official repos
         zypper -n install ${suse[@]}
         exit
         ;;
