@@ -1,6 +1,6 @@
-# set Helix as the default editor
-set --global --export EDITOR hx
-set --global --export VISUAL hx
+# set Neovim as the default editor
+set --global --export EDITOR nvim
+set --global --export VISUAL nvim
 
 # set Neovim as the default diff tool
 set --global --export DIFFPROG 'nvim -d'
