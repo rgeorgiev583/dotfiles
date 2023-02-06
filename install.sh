@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo ./install-packages.sh ./base-packages.lst ./packages.lst
-./install-nerd-font-hack.sh
 ./install-fisher.fish
 ./install-fzf-key-bindings-symlink.sh
 
