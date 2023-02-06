@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo ./install-packages.sh ./base-packages.lst ./packages.lst
+sudo ./install-packages.sh ./packages.lst
 ./install-fisher.fish
 ./install-fzf-key-bindings-symlink.sh
 
