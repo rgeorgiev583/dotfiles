@@ -1,2 +1,3 @@
 .gitconfig EMAIL=rgeorgiev583@gmail.com
 .config/fish/conf.d/00-environment.fish EXTRA_USER_PATHS=
+.gdbinit GCC_PYTHON_PATH=/usr/share/gcc-13/python
