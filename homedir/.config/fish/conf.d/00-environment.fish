@@ -1,9 +1,18 @@
-# set Neovim as the default editor
-set --global --export EDITOR nvim
-set --global --export VISUAL nvim
+if not set -q XDG_SESSION_TYPE; or test $XDG_SESSION_TYPE = tty -o $XDG_SESSION_TYPE = unspecified
+    # set Neovim as the default editor
+    set --global --export EDITOR nvim
+    set --global --export VISUAL nvim
 
-# set Neovim as the default diff tool
-set --global --export DIFFPROG 'nvim -d'
+    # set Neovim as the default diff tool
+    set --global --export DIFFPROG 'nvim -d'
+else
+    # set VSCode as the default editor
+    set --global --export EDITOR 'code --wait'
+    set --global --export VISUAL 'code --wait'
+
+    # set VSCode as the default diff tool
+    set --global --export DIFFPROG 'code --wait --diff'
+end
 
 # run `make` with as many jobs in parallel as there as processors
 set --global --export MAKEFLAGS -j(nproc)
