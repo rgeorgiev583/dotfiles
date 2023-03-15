@@ -9,7 +9,7 @@
 	pager = delta
 	whitespace = cr-at-eol
 [diff]
-	tool = nvimdiff
+	tool = vscode
 [diff "sqlite3"]
 	binary = true
 	textconv = "echo .dump | sqlite3"
