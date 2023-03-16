@@ -11,6 +11,9 @@ abbr --add --global less less --tabs=4 -RFX
 abbr --add --global rga rg --hidden --no-ignore
 abbr --add --global fda fd --hidden --no-ignore
 abbr --add --global c code
+abbr --add --global k kate
+abbr --add --global v vim
+abbr --add --global n nvim
 
 # Linux-specific definitions
 
