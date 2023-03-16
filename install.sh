@@ -2,7 +2,6 @@
 
 sudo ./install-packages.sh ./packages.lst
 ./install-fisher.fish
-./install-fzf-key-bindings-symlink.sh
 
 if [[ $# -eq 0 ]]; then
     ./install-dotfiles.sh < ./macro-defs.lst
