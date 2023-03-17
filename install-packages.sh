@@ -24,8 +24,8 @@ function install_packages {
         yum -y install ${fedora[@]}
         exit
         ;;
-    suse)
-        zypper -n install ${suse[@]}
+    opensuse)
+        zypper -n install ${opensuse[@]}
         exit
         ;;
     esac
