@@ -2,7 +2,7 @@
 
 function remove_target {
     while read -r src_file; do
-        rm -f ~/${src_file#homedir/}
+        rm -f ~/"${src_file#homedir/}"
     done
 }
 

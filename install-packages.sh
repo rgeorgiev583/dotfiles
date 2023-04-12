@@ -3,39 +3,35 @@
 source /etc/os-release
 
 for package_list_filename; do
-    source $package_list_filename
+    # shellcheck source=/dev/null
+    source "$package_list_filename"
 done
 
-function install_packages {
-    case $1 in
+for distro in $ID $ID_LIKE; do
+    case $distro in
     arch)
+        # shellcheck disable=SC2068,SC2154
         pacman --sync --needed --noconfirm ${arch[@]}
-        exit
+        break
         ;;
     debian)
         # `git-delta` is not in the official repos
+        # shellcheck disable=SC2068,SC2154
         apt-get -y update && apt-get -y install ${debian[@]} &&
             ln -sf /usr/bin/batcat /usr/local/bin/bat &&
             ln -sf /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
             ln -sf /usr/bin/vim.tiny /usr/local/bin/vim
-        exit
-    ;;
+        break
+        ;;
     fedora)
+        # shellcheck disable=SC2068,SC2154
         yum -y install ${fedora[@]}
-        exit
+        break
         ;;
     opensuse)
+        # shellcheck disable=SC2068,SC2154
         zypper -n install ${opensuse[@]}
-        exit
+        break
         ;;
     esac
-}
-
-install_packages "$ID"
-
-for distro in $ID_LIKE; do
-    install_packages "$distro"
 done
-
-echo 'error: OS not supported' >&2
-exit 1
