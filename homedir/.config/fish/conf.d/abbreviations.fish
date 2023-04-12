@@ -2,9 +2,7 @@ if not status --is-interactive
     exit
 end
 
-if set -q EDITOR
-    abbr --add --global e $EDITOR
-end
+abbr --add --global e $EDITOR
 
 abbr --add --global df df -h
 abbr --add --global less less --tabs=4 -RFX
