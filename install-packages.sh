@@ -11,12 +11,14 @@ for distro in $ID $ID_LIKE; do
         break
         ;;
     debian)
-        # `git-delta` is not in the official repos
         # shellcheck disable=SC2068,SC2154
         apt-get -y update && apt-get -y install ${debian[@]} &&
             ln -sf /usr/bin/batcat /usr/local/bin/bat &&
             ln -sf /usr/lib/cargo/bin/fd /usr/local/bin/fd &&
             ln -sf /usr/bin/vim.tiny /usr/local/bin/vim
+        rustup default stable
+        # `git-delta` is not in the official repos
+        cargo install git-delta
         break
         ;;
     fedora)
@@ -27,6 +29,9 @@ for distro in $ID $ID_LIKE; do
     opensuse)
         # shellcheck disable=SC2068,SC2154
         zypper -n install ${opensuse[@]}
+        rustup default stable
+        # `difftastic` is not in the official repos
+        cargo install difftastic
         break
         ;;
     esac
