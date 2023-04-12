@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 rsync -a homedir/ ~/ "$@"
 
 while read -r file_path macro_definition; do
