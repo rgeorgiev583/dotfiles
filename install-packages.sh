@@ -1,11 +1,7 @@
 #!/bin/bash
 
 source /etc/os-release
-
-for package_list_filename; do
-    # shellcheck source=/dev/null
-    source "$package_list_filename"
-done
+source ./packages.lst
 
 for distro in $ID $ID_LIKE; do
     case $distro in
