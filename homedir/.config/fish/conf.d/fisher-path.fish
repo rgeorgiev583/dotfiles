@@ -1,3 +1,5 @@
+# shamelessly stolen from https://github.com/kidonng/fisher_path.fish
+
 set --query _fisher_path_initialized && exit
 set --global _fisher_path_initialized
 
