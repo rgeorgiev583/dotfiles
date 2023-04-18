@@ -16,9 +16,9 @@
 [difftool]
 	prompt = false
 [difftool "nvim"]
-	cmd = nvim -d $LOCAL $REMOTE
+	cmd = nvim -d "$LOCAL" "$REMOTE"
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff "$LOCAL" "$REMOTE"
 [difftool "difftastic"]
 	cmd = difft "$LOCAL" "$REMOTE"
 [merge]
