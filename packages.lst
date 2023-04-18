@@ -1,4 +1,4 @@
-arch+=(bat difftastic fd fish fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
-debian+=(bat fd-find fish fzf m4 neovim psmisc python3-pip ripgrep rsync rustup sqlite3 tig tree)
-fedora+=(bat difftastic fd-find fish fzf git-delta m4 neovim psmisc python-pip ripgrep rsync sqlite tig tree)
-opensuse+=(bat fd fish fzf git-delta m4 neovim psmisc ripgrep rsync rustup sqlite tig tree)
+arch+=(bat difftastic fd fish fzf git-delta m4 neovim ripgrep rsync sqlite tig)
+debian+=(bat fd-find fish fzf m4 neovim ripgrep rsync rustup sqlite3 tig)
+fedora+=(bat difftastic fd-find fish fzf git-delta m4 neovim ripgrep rsync sqlite tig)
+opensuse+=(bat fd fish fzf git-delta m4 neovim ripgrep rsync rustup sqlite tig)
