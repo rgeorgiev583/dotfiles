@@ -18,17 +18,17 @@ abbr --add --global kce kubectl certificate
 abbr --add --global kcf kubectl config
 abbr --add --global kci kubectl cluster-info
 abbr --add --global kco kubectl cordon
-abbr --add --global kd kubectl delete
+abbr --add --global kd kubectl describe
 abbr --add --global kdb kubectl debug
-abbr --add --global kdd kubectl delete deployments
-abbr --add --global kde kubectl describe
-abbr --add --global kded kubectl describe deployments
-abbr --add --global kdep kubectl describe pods
-abbr --add --global kdes kubectl describe services
+abbr --add --global kdd kubectl describe deployments
+abbr --add --global kde kubectl delete
+abbr --add --global kded kubectl delete deployments
+abbr --add --global kdep kubectl delete pods
+abbr --add --global kdes kubectl delete services
 abbr --add --global kdi kubectl diff
-abbr --add --global kdp kubectl delete pods
+abbr --add --global kdp kubectl describe pods
 abbr --add --global kdr kubectl drain
-abbr --add --global kds kubectl delete services
+abbr --add --global kds kubectl describe services
 abbr --add --global ke kubectl exec
 abbr --add --global ked kubectl edit
 abbr --add --global kei kubectl exec -it
