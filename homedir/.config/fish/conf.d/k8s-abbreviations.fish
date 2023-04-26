@@ -41,8 +41,8 @@ abbr --add --global kgp kubectl get pods
 abbr --add --global kgs kubectl get services
 abbr --add --global kk kubectl kustomize
 abbr --add --global kl kubectl logs
-abbr --add --global klf kubectl logs -f
 abbr --add --global kla kubectl label
+abbr --add --global klf kubectl logs -f
 abbr --add --global kp kubectl proxy
 abbr --add --global kpa kubectl patch
 abbr --add --global kpf kubectl port-forward
