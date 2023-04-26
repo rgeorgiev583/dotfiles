@@ -36,6 +36,7 @@ abbr --add --global kev kubectl events
 abbr --add --global kex kubectl explain
 abbr --add --global kexp kubectl expose
 abbr --add --global kg kubectl get
+abbr --add --global kga kubectl get all -A
 abbr --add --global kgd kubectl get deployments
 abbr --add --global kgp kubectl get pods
 abbr --add --global kgs kubectl get services
