@@ -10,7 +10,7 @@ else
     set --global --export DIFFPROG 'code --wait --diff'
 end
 
-set --global --export LESS --tabs=4 -RFX
+set --global --export LESS --tabs=4 -RFXi
 
 set --global --export MAKEFLAGS -j(nproc)
 
