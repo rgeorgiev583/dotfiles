@@ -48,3 +48,5 @@
 	difftool = true
 [commit]
     verbose = true
+[tag]
+	sort = version:refname
