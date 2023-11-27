@@ -47,6 +47,6 @@
 [pager]
 	difftool = true
 [commit]
-    verbose = true
+	verbose = true
 [tag]
 	sort = version:refname
