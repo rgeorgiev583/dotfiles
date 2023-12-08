@@ -154,4 +154,4 @@ abbr --add --global gpum 'git pull upstream master'
 abbr --add --global gwch 'git whatchanged -p --abbrev-commit --pretty=medium'
 abbr --add --global gwip 'git add -A; git rm (git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m \'--wip-- [skip ci]\''
 
-abbr --add --global tigf 'tig --first-parent'
+abbr --add --global tf 'tig --first-parent'
