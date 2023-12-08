@@ -11,7 +11,6 @@ abbr --add --global c code
 abbr --add --global v vim
 abbr --add --global n nvim
 abbr --add --global b bat
-abbr --add --global t tig
 
 # Linux-specific definitions
 
