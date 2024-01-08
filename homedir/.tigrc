@@ -1,2 +1,4 @@
 set wrap-lines = yes
+set main-view-id-display = yes
+
 bind main B !?git rebase -i %(commit)
