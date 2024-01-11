@@ -1,4 +1,5 @@
 set wrap-lines = yes
 set main-view-id-display = yes
+set diff-options = --diff-merges=m
 
 bind main B !?git rebase -i %(commit)
