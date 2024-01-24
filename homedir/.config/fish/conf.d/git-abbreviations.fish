@@ -54,6 +54,7 @@ abbr --add --global gdct 'git describe --tags `git rev-list --tags --max-count=1
 abbr --add --global gds 'git diff --staged'
 abbr --add --global gdt 'git diff-tree --no-commit-id --name-only -r'
 abbr --add --global gdw 'git diff --word-diff'
+abbr --add --global gdmb 'git diff --merge-base'
 abbr --add --global gf 'git fetch'
 abbr --add --global gfa 'git fetch --all'
 abbr --add --global gfo 'git fetch origin'
