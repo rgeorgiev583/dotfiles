@@ -50,3 +50,5 @@
 	verbose = true
 [tag]
 	sort = version:refname
+[stash]
+	showIncludeUntracked = true
