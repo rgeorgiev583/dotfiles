@@ -28,8 +28,6 @@
 	cmd = code --wait --merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 [submodule]
 	fetchJobs = 0
-[pull]
-	rebase = true
 [interactive]
 	diffFilter = delta --color-only
 [delta]
