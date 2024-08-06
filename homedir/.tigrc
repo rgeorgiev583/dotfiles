@@ -1,6 +1,6 @@
 set wrap-lines = yes
 set main-view-id-display = yes
 set diff-options = --diff-merges=m
-set line-graphics = auto
+set line-graphics = utf-8
 
 bind main B !?git rebase -i %(commit)
