@@ -48,3 +48,7 @@
 	sort = version:refname
 [stash]
 	showIncludeUntracked = true
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
