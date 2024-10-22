@@ -2,8 +2,6 @@ if not status --is-interactive
     exit
 end
 
-set kubectl_cmd kubectl
-
 abbr --add --global k kubectl
 abbr --add --global ka kubectl apply
 abbr --add --global kaf kubectl apply -f
