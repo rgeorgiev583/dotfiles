@@ -11,12 +11,6 @@ for distro in $ID $ID_LIKE; do
         ;;
 
     debian)
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs >rustup.sh
-        chmod +x rustup.sh
-        ./rustup.sh -y
-        rm rustup.sh
-        # `git-delta` is not in the official repos
-        cargo install git-delta
         break
         ;;
 
