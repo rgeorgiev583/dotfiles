@@ -10,18 +10,14 @@ for distro in $ID $ID_LIKE; do
         break
         ;;
 
-    debian)
+    debian | opensuse)
+        rustup default stable
+        # `difftastic` is not in the official repos
+        cargo install difftastic
         break
         ;;
 
     fedora)
-        break
-        ;;
-
-    opensuse)
-        rustup default stable
-        # `difftastic` is not in the official repos
-        cargo install difftastic
         break
         ;;
     esac

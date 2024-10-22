@@ -1,4 +1,4 @@
 arch+=(bat difftastic fd fish fzf git-delta m4 neovim ripgrep rsync sqlite tig)
-debian+=(bat fd-find fish fzf git-delta m4 neovim ripgrep rsync sqlite3 tig)
+debian+=(bat fd-find fish fzf git-delta m4 neovim ripgrep rsync rustup sqlite3 tig)
 fedora+=(bat difftastic fd-find fish fzf git-delta m4 neovim ripgrep rsync sqlite tig)
 opensuse+=(bat fd fish fzf git-delta m4 neovim ripgrep rsync rustup sqlite tig)
