@@ -11,3 +11,7 @@ set print asm-demangle on
 set print object on
 set print pretty on
 set print vtbl on
+
+set pagination off
+set non-stop on
+set disassembly-flavor intel
