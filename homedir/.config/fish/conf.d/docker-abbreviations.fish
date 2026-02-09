@@ -16,6 +16,7 @@ abbr --add --global dco "$docker_cmd commit"
 abbr --add --global de "$docker_cmd exec"
 abbr --add --global dei "$docker_cmd exec -it"
 abbr --add --global di "$docker_cmd images"
+abbr --add --global div docker-images-verbose
 abbr --add --global din "$docker_cmd inspect"
 abbr --add --global dk "$docker_cmd kill"
 abbr --add --global dl "$docker_cmd logs"
